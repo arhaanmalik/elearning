@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">C Structure and Function</h1>
+<ul class="points">
+
+   
+    In this tutorial, you'll learn to pass struct variables as arguments to a function. You will learn to return struct from a function with the help of examples.
+    <br>
+    <br>
+    Similar to variables of built-in types, you can also pass structure variables to a function.
+    <br><br>
+    Passing structs to functions<br>
+    We recommended you to learn these tutorials before you learn how to pass structs to functions.
+    <br><br>
+    C structures<br>
+    C functions<br>
+    User-defined Function<br>
+    Here's how you can pass structures to a function<br><br>
+    
+    #include <stdio.h><br>
+    struct student {<br>
+       char name[50];<br>
+       int age;<br>
+    };<br>
+    
+    // function prototype<br>
+    void display(struct student s);<br><br>
+    
+    int main() {<br>
+       struct student s1;<br><br>
+    
+       printf("Enter name: ");<br><br>
+    
+       // read string input from the user until \n is entered<br>
+       // \n is discarded<br>
+       scanf("%[^\n]%*c", s1.name);<br><br>
+    
+       printf("Enter age: ");<br>
+       scanf("%d", &s1.age);<br><br>
+    
+       display(s1); // passing struct as an argument<br><br>
+    
+       return 0;<br><br>
+    }<br><br>
+    
+    void display(struct student s) {<br>
+       printf("\nDisplaying information\n");<br>
+       printf("Name: %s", s.name);<br>
+       printf("\nAge: %d", s.age);<br>
+    }<br>
+    Output<br><br>
+    
+    Enter name: Bond<br>
+    Enter age: 13<br><br>
+    
+    Displaying information<br>
+    Name: Bond<br>
+    Age: 13  <br>
+    Here, a struct variable s1 of type struct student is created. The variable is passed to the display() function using display(s1); statement.
+    <br><br>
+    Return struct from a function
+    <br><br>
+    Here's how you can return structure from a function:
+    <br><br>
+    #include <stdio.h><br>
+    struct student<br>
+    {<br>
+        char name[50];<br>
+        int age;<br>
+    };<br>
+    
+    // function prototype<br>
+    struct student getInformation();<br><br>
+    
+    int main()<br>
+    {<br>
+        struct student s;<br><br>
+    
+        s = getInformation();<br><br>
+    
+        printf("\nDisplaying information\n");<br>
+        printf("Name: %s", s.name);<br>
+        printf("\nRoll: %d", s.age);<br><br>
+        
+        return 0;<br>
+    }<br>
+    struct student getInformation() <br>
+    {<br>
+      struct student s1;<br><br>
+    
+      printf("Enter name: ");<br>
+      scanf ("%[^\n]%*c", s1.name);<br><br>
+    
+      printf("Enter age: ");<br>
+      scanf("%d", &s1.age);<br><br>
+      
+      return s1;<br>
+    }	<br>
+    Here, the getInformation() function is called using s = getInformation(); statement. The function returns a structure of type struct student. The returned structure is displayed from the main() function.
+    <br><br>
+    Notice that, the return type of getInformation() is also struct student.
+    <br><br>
+    Passing struct by reference<br>
+    You can also pass structs by reference (in a similar way like you pass variables of built-in type by reference). We suggest you to read pass by reference tutorial before you proceed.
+    <br><br>
+    During pass by reference, the memory addresses of struct variables are passed to the function.
+    <br><br>
+    #include <stdio.h><br>
+    typedef struct Complex<br>
+    {<br>
+        float real;<br>
+        float imag;<br>
+    } complex;<br><br>
+    
+    void addNumbers(complex c1, complex c2, complex *result); 
+    <br><br>
+    int main()<br>
+    {<br><br>
+        complex c1, c2, result;<br><br>
+    
+        printf("For first number,\n");<br>
+        printf("Enter real part: ");<br>
+        scanf("%f", &c1.real);<br>
+        printf("Enter imaginary part: ");<br>
+        scanf("%f", &c1.imag);<br><br>
+    
+        printf("For second number, \n");<br>
+        printf("Enter real part: ");<br>
+        scanf("%f", &c2.real);<br>
+        printf("Enter imaginary part: ");<br>
+        scanf("%f", &c2.imag);<br><br>
+    
+        addNumbers(c1, c2, &result); <br>
+        printf("\nresult.real = %.1f\n", result.real);<br>
+        printf("result.imag = %.1f", result.imag);<br><br>
+        
+        return 0;<br>
+    }<br>
+    void addNumbers(complex c1, complex c2, complex *result) <br>
+    {<br>
+         result->real = c1.real + c2.real;<br>
+         result->imag = c1.imag + c2.imag; <br><br>
+    }<br>
+    Output<br>
+    
+    For first number,<br>
+    Enter real part:  1.1<br>
+    Enter imaginary part:  -2.4<br>
+    For second number, <br>
+    Enter real part:  3.4<br>
+    Enter imaginary part:  -3.2<br><br>
+    
+    result.real = 4.5<br>
+    result.imag = -5.6  <br>
+    In the above program, three structure variables c1, c2 and the address of result is passed to the addNumbers() function. Here, result is passed by reference.
+    <br><br>
+    When the result variable inside the addNumbers() is altered, the result variable inside the main() function is also altered accordingly.
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+              <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">C Keywords and Identifiers</h1>
+<ul class="points">
+    <strong>C break and continue</strong><br>
+    We learned about loops in previous tutorials. In this tutorial, we will learn to use break and continue statements with the help of examples.
+    <br>
+    
+    C break<br>
+    The break statement ends the loop immediately when it is encountered. Its syntax is:
+    <br>
+    break;<br>
+    The break statement is almost always used with if...else statement inside the loop.
+    <br>
+    How break statement works?<br>
+    Working of break statement<br>
+    <br>
+    Example 1: break statement<br>
+    // Program to calculate the sum of numbers (10 numbers max)<br>
+    // If the user enters a negative number, the loop terminates<br>
+    <br>
+    #include < stdio.h><br>
+    <br>
+    int main() {<br>
+       int i;<br>
+       double number, sum = 0.0;<br>
+    
+       for (i = 1; i <= 10; ++i) {<br>
+          printf("Enter a n%d: ", i);<br>
+          scanf("%lf", &number);<br>
+    
+          // if the user enters a negative number, break the loop<br>
+          if (number < 0.0) {<br>
+             break;<br>
+          }<br>
+    
+          sum += number; // sum = sum + number;<br>
+       }<br>
+    
+       printf("Sum = %.2lf", sum);<br>
+       <br>
+       return 0;<br>
+    }<br>
+    Output<br>
+    <br>
+    Enter a n1: 2.4<br>
+    Enter a n2: 4.5<br>
+    Enter a n3: 3.4<br>
+    Enter a n4: -3<br>
+    Sum = 10.30<br>
+    This program calculates the sum of a maximum of 10 numbers. Why a maximum of 10 numbers? It's because if the user enters a negative number, the break statement is executed. This will end the for loop, and the sum is displayed.
+    <br>
+    
+    In C, break is also used with the switch statement. This will be discussed in the next tutorial.
+    <br>
+   <strong> C continue</strong><br>
+    The continue statement skips the current iteration of the loop and continues with the next iteration. Its syntax is:
+    <br>
+    continue;<br>
+    The continue statement is almost always used with the if...else statement.
+    <br>
+    How continue statement works?<br>
+    Working of continue statement in C programming<br>
+    <br>
+    Example 2: continue statement<br>
+    // Program to calculate the sum of numbers (10 numbers max)<br>
+    // If the user enters a negative number, it's not added to the result<br>
+    <br>
+    #include < stdio.h><br>
+    int main() {<br>
+       int i;<br>
+       double number, sum = 0.0;<br>
+       <br>
+       for (i = 1; i <= 10; ++i) {<br>
+          printf("Enter a n%d: ", i);<br>
+          scanf("%lf", &number);<br>
+          <br>
+          if (number < 0.0) {<br>
+             continue;<br>
+          }<br>
+          <br>
+          sum += number; // sum = sum + number;<br>
+       }<br>
+       <br>
+       printf("Sum = %.2lf", sum);<br>
+       <br>
+       return 0;<br>
+    }<br>
+    Output<br>
+    <br>
+    Enter a n1: 1.1<br>
+    Enter a n2: 2.2<br>
+    Enter a n3: 5.5<br>
+    Enter a n4: 4.4<br>
+    Enter a n5: -3.4<br>
+    Enter a n6: -45.5<br>
+    Enter a n7: 34.5<br>
+    Enter a n8: -4.2<br>
+    Enter a n9: -1000<br>
+    Enter a n10: 12<br>
+    Sum = 59.70<br>
+    In this program, when the user enters a positive number, the sum is calculated using sum += number; statement.
+    <br>
+    When the user enters a negative number, the continue statement is executed and it skips the negative number from the calculation.
+    <br>
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+                <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+    
+        </div>
+    </body>
+
+</html>

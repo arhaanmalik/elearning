@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/1computernework.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">tcp/ip model</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">TCP/IP model</h1>
+
+
+                    <h1>**************************UNDER CONSTRUCTION***************************************</h1>
+<ul class="points">
+<li>The TCP/IP model was developed prior to the OSI model.</li>
+<li>The TCP/IP model is not exactly similar to the OSI model.</li>
+<li>The TCP/IP model consists of five layers: the application layer, transport layer, network layer, data link layer and physical layer.</li>
+<li>The first four layers provide physical standards, network interface, internetworking, and transport functions that correspond to the first four layers of the OSI model and these four layers are represented in TCP/IP model by a single layer called the application layer. </li>
+<li>TCP/IP is a hierarchical protocol made up of interactive modules, and each of them provides specific functionality.</li>
+</ul>
+<p>Here, hierarchical means that each upper-layer protocol is supported by two or more lower-level protocols.</p>
+<h2 class="h2">Functions of TCP/IP layers:</h2>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/tcp-ip-model.png" alt="TCP/IP model"/>
+
+<h2 class="h3">Network Access Layer</h2>
+<ul class="points">
+<li>A network layer is the lowest layer of the TCP/IP model.</li>
+<li>A network layer is the combination of the Physical layer and Data Link layer defined in the OSI reference model.</li>
+<li>It defines how the data should be sent physically through the network.</li>
+<li>This layer is mainly responsible for the transmission of the data between two devices on the same network.</li>
+<li>The functions carried out by this layer are encapsulating the IP datagram into frames transmitted by the network and mapping of IP addresses into physical addresses.</li>
+<li>The protocols used by this layer are ethernet, token ring, FDDI, X.25, frame relay.</li>
+</ul>
+
+<h2 class="h3">Internet Layer</h2>
+<ul class="points">
+<li>An internet layer is the second layer of the TCP/IP model.</li>
+<li>An internet layer is also known as the network layer.</li>
+<li>The main responsibility of the internet layer is to send the packets from any network, and they arrive at the destination irrespective of the route they take.</li>
+</ul>
+<h3 class="h4">Following are the protocols used in this layer are:</h3>
+<p><strong>IP Protocol:</strong> IP protocol is used in this layer, and it is the most significant part of the entire TCP/IP suite.</p>
+<p>Following are the responsibilities of this protocol:</p>
+<ul class="points">
+<li><strong>IP Addressing:</strong> This protocol implements logical host addresses known as IP addresses. The IP addresses are used by the internet and higher layers to identify the device and to provide internetwork routing.</li>
+<li><strong>Host-to-host communication:</strong> It determines the path through which the data is to be transmitted.</li>
+<li><strong>Data Encapsulation and Formatting:</strong> An IP protocol accepts the data from the transport layer protocol. An IP protocol ensures that the data is sent and received securely, it encapsulates the data into message known as IP datagram.</li>
+<li><strong>Fragmentation and Reassembly:</strong> The limit imposed on the size of the IP datagram by data link layer protocol is known as Maximum Transmission unit (MTU). If the size of IP datagram is greater than the MTU unit, then the IP protocol splits the datagram into smaller units so that they can travel over the local network. Fragmentation can be done by the sender or intermediate router. At the receiver side, all the fragments are reassembled to form an original message.</li>
+<li><strong>Routing:</strong> When IP datagram is sent over the same local network such as LAN, MAN, WAN, it is known as direct delivery. When source and destination are on the distant network, then the IP datagram is sent indirectly. This can be accomplished by routing the IP datagram through various devices such as routers.</li>
+</ul>
+
+<p><strong>ARP Protocol</strong></p>
+<ul class="points">
+<li>ARP stands for <strong>Address Resolution Protocol</strong>.</li>
+<li>ARP is a network layer protocol which is used to find the physical address from the IP address.</li>
+<li><strong>The two terms are mainly associated with the ARP Protocol:</strong>
+<ul class="points">
+<li><strong>ARP request:</strong> When a sender wants to know the physical address of the device, it broadcasts the ARP request to the network.</li>
+<li><strong>ARP reply:</strong> Every device attached to the network will accept the ARP request and process the request, but only recipient recognize the IP address and sends back its physical address in the form of ARP reply. The recipient adds the physical address both to its cache memory and to the datagram header</li>
+</ul>
+</li>
+</ul>
+
+<p><strong>ICMP Protocol</strong></p>
+<ul class="points">
+<li><strong>ICMP</strong> stands for Internet Control Message Protocol.</li>
+<li>It is a mechanism used by the hosts or routers to send notifications regarding datagram problems back to the sender.</li>
+<li>A datagram travels from router-to-router until it reaches its destination. If a router is unable to route the data because of some unusual conditions such as disabled links, a device is on fire or network congestion, then the ICMP protocol is used to inform the sender that the datagram is undeliverable.</li>
+<li>An ICMP protocol mainly uses two terms:
+<ul class="points">
+<li><strong>ICMP Test:</strong> ICMP Test is used to test whether the destination is reachable or not.</li>
+<li><strong>ICMP Reply:</strong> ICMP Reply is used to check whether the destination device is responding or not.</li>
+</ul>
+</li>
+<li>The core responsibility of the ICMP protocol is to report the problems, not correct them. The responsibility of the correction lies with the sender.</li>
+<li>ICMP can send the messages only to the source, but not to the intermediate routers because the IP datagram carries the addresses of the source and destination but not of the router that it is passed to.</li>
+</ul>
+<hr/>
+
+<h2 class="h3">Transport Layer</h2>
+<p>The transport layer is responsible for the reliability, flow control, and correction of data which is being sent over the network.</p>
+<p>The two protocols used in the transport layer are <strong>User Datagram protocol and Transmission control protocol</strong>.</p>
+<ul class="points">
+<li><strong>User Datagram Protocol (UDP)</strong>
+<ul class="points">
+<li>It provides connectionless service and end-to-end delivery of transmission.</li>
+<li>It is an unreliable protocol as it discovers the errors but not specify the error.</li>
+<li>User Datagram Protocol discovers the error, and ICMP protocol reports the error to the sender that user datagram has been damaged.</li>
+<li><strong>UDP consists of the following fields:</strong><br>
+<strong>Source port address:</strong> The source port address is the address of the application program that has created the message.<br>
+<strong>Destination port address:</strong> The destination port address is the address of the application program that receives the message.<br>
+<strong>Total length:</strong> It defines the total number of bytes of the user datagram in bytes.<br>
+<strong>Checksum:</strong> The checksum is a 16-bit field used in error detection.</li>
+<li>UDP does not specify which packet is lost. UDP contains only checksum; it does not contain any ID of a data segment.</li>
+</ul>
+</li>
+</ul>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/tcp-ip-model2.png" alt="TCP/IP model"/><br>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/tcp-ip-model3.png" alt="TCP/IP model"/>
+<ul class="points">
+<li><strong>Transmission Control Protocol (TCP)</strong>
+<ul class="points">
+<li>It provides a full transport layer services to applications.</li>
+<li>It creates a virtual circuit between the sender and receiver, and it is active for the duration of the transmission.</li>
+<li>TCP is a reliable protocol as it detects the error and retransmits the damaged frames. Therefore, it ensures all the segments must be received and acknowledged before the transmission is considered to be completed and a virtual circuit is discarded.</li>
+<li>At the sending end, TCP divides the whole message into smaller units known as segment, and each segment contains a sequence number which is required for reordering the frames to form an original message.</li>
+<li>At the receiving end, TCP collects all the segments and reorders them based on sequence numbers.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+
+<h2 class="h3">Application Layer</h2>
+<ul class="points">
+<li>An application layer is the topmost layer in the TCP/IP model.</li>
+<li>It is responsible for handling high-level protocols, issues of representation.</li>
+<li>This layer allows the user to interact with the application.</li>
+<li>When one application layer protocol wants to communicate with another application layer, it forwards its data to the transport layer.</li>
+<li>There is an ambiguity occurs in the application layer. Every application cannot be placed inside the application layer except those who interact with the communication system. For example: text editor cannot be considered in application layer while web browser using <strong>HTTP</strong> protocol to interact with the network where <strong>HTTP</strong> protocol is an application layer protocol.</li>
+</ul>
+
+<h3 class="h4">Following are the main protocols used in the application layer:</h4>
+<ul class="points">
+<li><strong>HTTP:</strong> HTTP stands for Hypertext transfer protocol. This protocol allows us to access the data over the world wide web. It transfers the data in the form of plain text, audio, video. It is known as a Hypertext transfer protocol as it has the efficiency to use in a hypertext environment where there are rapid jumps from one document to another.</li>
+<li><strong>SNMP:</strong> SNMP stands for Simple Network Management Protocol. It is a framework used for managing the devices on the internet by using the TCP/IP protocol suite.</li>
+<li><strong>SMTP:</strong> SMTP stands for Simple mail transfer protocol. The TCP/IP protocol that supports the e-mail is known as a Simple mail transfer protocol. This protocol is used to send the data to another e-mail address.</li>
+<li><strong>DNS:</strong> DNS stands for Domain Name System. An IP address is used to identify the connection of a host to the internet uniquely. But, people prefer to use the names instead of addresses. Therefore, the system that maps the name to the address is known as Domain Name System.</li>
+<li><strong>TELNET:</strong> It is an abbreviation for Terminal Network. It establishes the connection between the local computer and remote computer in such a way that the local terminal appears to be a terminal at the remote system.</li>
+<li><strong>FTP:</strong>  FTP stands for File Transfer Protocol. FTP is a standard internet protocol used for transmitting the files from one computer to another computer.</li>
+</ul>
+                    
+                    <hr/>
+                    <div class="botton">
+                    <a href="./10OSIMODEL.html" class="previous">&laquo; Previous</a>
+                    <a href="./12digitaltransmosion.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2> NETWORKING </h2>
+                <ul>
+                    <li><a href="1ComputerNetwork.html" > <i class="fa fa-qrcode"> </i> Computer Network </li>
+                        <li><a href="2introduction.html" > <i class="fa fa-qrcode"> </i> Introduction </li>
+                            <li><a href="3feature.html" > <i class="fa fa-qrcode"> </i> Features Of Computer network</li>
+                                <li><a href="4Architecture.html" > <i class="fa fa-qrcode"> </i> Computer Network Architecture </li>
+                                    <li><a href="5component.html" > <i class="fa fa-qrcode"> </i> Computer Network Components </li>
+                                        <li><a href="6networkType.html" > <i class="fa fa-qrcode"> </i> Computer Network Types</li>
+                                            <li><a href="7topology.html" > <i class="fass fa-qrcode"> </i> What is Topology?</li>
+                                                <li><a href="8transmisionmode.html" > <i class="fass fa-qrcode"> </i> Transmission modes</li>
+                                                    <li><a href="9networkmodel.html" > <i class="fass fa-qrcode"> </i>Computer Network Models</li>
+                                                        <li><a href="10OSIMODEL.html" > <i class="fass fa-qrcode"> </i> OSI Model </li>
+                                                            <li><a href="11tcpipmodel.html" > <i class="fass fa-qrcode"> </i> TCP/IP model </li>
+                                                                <li><a href="12digitaltransmosion.html" > <i class="fass fa-qrcode"> </i> Digital Transmission </li>
+                                                                    <li><a href="13transmision media.html" > <i class="fass fa-qrcode"> </i> Transmission Media </li>
+                                                                        <li><a href="14guided media.html" > <i class="fass fa-qrcode"> </i> Guided Media </li>
+                                                                            <li><a href="15unguided media.html" > <i class="fass fa-qrcode"> </i> Unguided Media </li>
+                                                                                <li><a href="16multiplexing media.html" > <i class="fass fa-qrcode"> </i> Multipleing media </li>
+                                                                                    <li><a href="17switching.html" > <i class="fass fa-qrcode"> </i> Switching  </li>
+                                                                                        <li><a href="18switching modes.html" > <i class="fass fa-qrcode"> </i> Switching modes</li>
+                                                                                            <li><a href="19swiching technics.html" > <i class="fass fa-qrcode"> </i>Switching technics </li>
+                                                                                                <li><a href="20data link layer.html" > <i class="fass fa-qrcode"> </i> Data Link Layer </li>
+                                                                                                    <li><a href="21Errordedection.html" > <i class="fass fa-qrcode"> </i> Error Dedection</li>
+                                                                                                        <li><a href="22Errorcorrection.html" > <i class="fass fa-qrcode"> </i>Error correction</li>
+                                                                                                            <li><a href="23data link control.html" > <i class="fass fa-qrcode"> </i> Data link control </li>
+                                                                                                                <li><a href="24networklayer.html" > <i class="fass fa-qrcode"> </i>Network Layer</li>
+                                                                                                                    <li><a href="25network addressing.html" > <i class="fass fa-qrcode"> </i>Network Addressing</li>
+                                                                                                                        <li><a href="26routing.html" > <i class="fass fa-qrcode"> </i>Routing</li>
+                                                                                                                            <li><a href="27networklayerprotocol.html" > <i class="fass fa-qrcode"> </i>Network Layer Protocol</li>
+                                                                                                                                <li><a href="28routingalgorithum.html" > <i class="fass fa-qrcode"> </i>Routing algorithum</li>
+            
+                                                                                                                                    <li><a href="29distancevactor.html" > <i class="fass fa-qrcode"> </i> Distance vactor</li>
+                                                                                                                                        <li><a href="30link state routong.html" > <i class="fass fa-qrcode"> </i>Link State routing</li>
+            
+                                                                                                                                            <li><a href="31transportlayer.html" > <i class="fass fa-qrcode"> </i>Transport Layer</li>
+            
+                                                                                                                                                <li><a href="32transport layer protocol.html" > <i class="fass fa-qrcode"> </i> Transport Layer protocol </li>
+                                                                                                                                                    <li><a href="33applicationlayer.html" > <i class="fass fa-qrcode"> </i> Application</li>
+                                                                                                                                                        <li><a href="34dns.html" > <i class="fass fa-qrcode"> </i>DNS</li>
+                                                                                                                                                            <li><a href="35Ftp.html" > <i class="fass fa-qrcode"> </i> FTP</li>
+                                                                                                                                                                <li><a href="36SMTP.html" > <i class="fass fa-qrcode"> </i>SMTP</li>
+                                                                                                                                                                    <li><a href="37snmp.html" > <i class="fass fa-qrcode"> </i> snmp </li>
+                                                                                                                                                                        <li><a href="38http.html" > <i class="fass fa-qrcode"> </i>HTTP</li> 
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+  <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+    
+        </div>
+    </body>
+
+</html>

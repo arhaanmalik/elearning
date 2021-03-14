@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">C Dynamic Memory Allocation</h1>
+<ul class="points">
+    
+    In this tutorial, you'll learn to dynamically allocate memory in your C program using standard library functions: malloc(), calloc(), free() and realloc().
+    <br>
+    <br>
+    As you know, an array is a collection of a fixed number of values. Once the size of an array is declared, you cannot change it.
+    <br>  <br>
+    Sometimes the size of the array you declared may be insufficient. To solve this issue, you can allocate memory manually during run-time. This is known as dynamic memory allocation in C programming.
+    <br>  <br>
+    To allocate memory dynamically, library functions are malloc(), calloc(), realloc() and free() are used. These functions are defined in the <stdlib.h> header file.
+        <br>  <br>
+    C malloc()  <br>
+    The name "malloc" stands for memory allocation.  <br>
+    <br>
+    The malloc() function reserves a block of memory of the specified number of bytes. And, it returns a pointer of void which can be casted into pointers of any form.
+    <br>  <br>
+    Syntax of malloc()  <br>
+    ptr = (castType*) malloc(size);  <br>
+    Example  <br>
+    <br>
+    ptr = (float*) malloc(100 * sizeof(float));  <br>
+    The above statement allocates 400 bytes of memory. It's because the size of float is 4 bytes. And, the pointer ptr holds the address of the first byte in the allocated memory.
+    <br>  <br>
+    
+    The expression results in a NULL pointer if the memory cannot be allocated.  <br>
+    <br>
+    C calloc()  <br>
+    The name "calloc" stands for contiguous allocation.  <br>
+    <br>
+    The malloc() function allocates memory and leaves the memory uninitialized. Whereas, the calloc() function allocates memory and initializes all bits to zero.
+    <br>  <br>
+    Syntax of calloc()  <br>
+    ptr = (castType*)calloc(n, size);  <br>
+    Example:  <br>
+    <br>
+    ptr = (float*) calloc(25, sizeof(float));  <br>
+    The above statement allocates contiguous space in memory for 25 elements of type float.  <br>
+    <br>
+    C free()  <br>
+    Dynamically allocated memory created with either calloc() or malloc() doesn't get freed on their own. You must explicitly use free() to release the space.
+    <br>  <br>
+    Syntax of free()  <br>
+    free(ptr);  <br>
+    This statement frees the space allocated in the memory pointed by ptr.  <br>
+    <br>
+    Example 1: malloc() and free()  <br>
+    // Program to calculate the sum of n numbers entered by the user  <br>
+    <br>
+    #include < stdio.h>  <br>
+    #include < stdlib.h>   <br>
+    <br>
+    int main()  <br>
+    {  <br>
+        int n, i, *ptr, sum = 0;  <br>
+        <br>
+        printf("Enter number of elements: ");  <br>
+        scanf("%d", &n);  <br>
+        <br>
+        ptr = (int*) malloc(n * sizeof(int));  <br>
+        <br>
+        // if memory cannot be allocated  <br>
+        if(ptr == NULL)                       <br>
+        {  <br>
+            printf("Error! memory not allocated.");  <br>
+            exit(0);  <br>
+        }  <br>
+        <br>
+        printf("Enter elements: ");  <br>
+        for(i = 0; i < n; ++i)  <br>
+        {  <br>
+            scanf("%d", ptr + i);  <br>
+            sum += *(ptr + i);  <br>
+        }  <br>
+        <br>
+        printf("Sum = %d", sum);  <br>
+        <br>
+        // deallocating the memory  <br>
+        free(ptr);  <br>
+        <br>
+        return 0;  <br>
+    }  <br>
+    Here, we have dynamically allocated the memory for n number of int.  <br>
+    <br>
+    Example 2: calloc() and free()  <br>
+    // Program to calculate the sum of n numbers entered by the user  <br>
+    <br>
+    #include <stdio.h>  <br>
+    #include <stdlib.h>  <br>
+        <br>
+    int main()  <br>
+    {  <br>
+        int n, i, *ptr, sum = 0;  <br>
+        printf("Enter number of elements: ");  <br>
+        scanf("%d", &n);  <br>
+        <br>
+        ptr = (int*) calloc(n, sizeof(int));  <br>
+        if(ptr == NULL)  <br>
+        {  <br>
+            printf("Error! memory not allocated.");  <br>
+            exit(0);  <br>
+        }  <br>
+        <br>
+        printf("Enter elements: ");  <br>
+        for(i = 0; i < n; ++i)  <br>
+        {  <br>
+            scanf("%d", ptr + i);  <br>
+            sum += *(ptr + i);  <br>
+        }  <br>
+        <br>
+        printf("Sum = %d", sum);  <br>
+        free(ptr);  <br>
+        return 0;  <br>
+    }  <br>
+    C realloc()  <br>
+    If the dynamically allocated memory is insufficient or more than required, you can change the size of previously allocated memory using the realloc() function.
+    <br>  <br>
+    Syntax of realloc()  <br>
+    ptr = realloc(ptr, x);  <br>
+    Here, ptr is reallocated with a new size x.  <br>
+    <br>
+    Example 3: realloc()  <br>
+    #include <stdio.h>  <br>
+    #include <stdlib.h>  <br>
+        <br>
+    int main()  <br>
+    {  <br>
+        int *ptr, i , n1, n2;  <br>
+        printf("Enter size: ");  <br>
+        scanf("%d", &n1);
+        <br>
+        ptr = (int*) malloc(n1 * sizeof(int));  <br>
+        <br>
+        printf("Addresses of previously allocated memory: ");  <br>
+        for(i = 0; i < n1; ++i)  <br>
+             printf("%u\n",ptr + i);  <br>
+             <br>
+        printf("\nEnter the new size: ");  <br>
+        scanf("%d", &n2);  <br>
+        <br>
+        // rellocating the memory  <br>
+        ptr = realloc(ptr, n2 * sizeof(int));  <br>
+        <br>
+        printf("Addresses of newly allocated memory: ");  <br>
+        for(i = 0; i < n2; ++i)  <br>
+             printf("%u\n", ptr + i);  <br>
+             <br>
+        free(ptr);  <br>
+        <br>
+        return 0;  <br>
+    }  <br>
+    When you run the program, the output will be:  <br>
+    <br>
+    Enter size: 2  <br>
+    Addresses of previously allocated memory:26855472  <br>
+    26855476  <br>
+    <br>
+    Enter the new size: 4  <br>
+    Addresses of newly allocated memory:26855472  <br>
+    26855476  <br>
+    26855480  <br>
+    26855484  <br>
+    <br>
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+               <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+    
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">Storage classes in C</h1>
+<ul class="points">
+   
+
+    In C language, each variable has a storage class which decides the following things:
+    <br><br>
+    scope i.e where the value of the variable would be available inside a program.<br>
+    default initial value i.e if we do not explicitly initialize that variable, what will be its default initial value.
+    lifetime of that variable i.e for how long will that variable exist.<br><br>
+    
+    The following storage classes are most oftenly used in C programming,
+    <br><br>
+    Automatic variables<br>
+    External variables<br>
+    Static variables<br>
+    Register variables<br>
+    Automatic variables: auto<br>
+    Scope: Variable defined with auto storage class are local to the function block inside which they are defined.
+    <br><br>
+    Default Initial Value: Any random value i.e garbage value.<br><br>
+    
+    Lifetime: Till the end of the function/method block where the variable is defined.<br><br>
+    
+    A variable declared inside a function without any storage class specification, is by default an automatic variable. They are created when a function is called and are destroyed automatically when the function's execution is completed. Automatic variables can also be called local variables because they are local to a function. By default they are assigned garbage value by the compiler.
+    <br><br>
+    #include<stdio.h><br><br>
+        
+    void main()<br>
+    {<br>
+        int detail;<br>
+        // or <br>
+        auto int details;    //Both are same<br>
+    }<br>
+    External or Global variable<br>
+    Scope: Global i.e everywhere in the program. These variables are not bound by any function, they are available everywhere.
+    <br><br>
+    Default initial value: 0(zero).<br><br>
+    
+    Lifetime: Till the program doesn't finish its execution, you can access global variables.
+    <br><br>
+    A variable that is declared outside any function is a Global Variable. Global variables remain available throughout the program execution. By default, initial value of the Global variable is 0(zero). One important thing to remember about global variable is that their values can be changed by any function in the program.
+    <br><br>
+    #include<stdio.h><br><br>
+    
+    int number;     // global variable<br><br>
+    
+    void main()<br>
+    {<br>
+        number = 10;<br>
+        printf("I am in main function. My value is %d\n", number);<br>
+        fun1();     //function calling, discussed in next topic<br>
+        fun2();     //function calling, discussed in next topic<br>
+    }<br>
+    <br><br>
+    /* This is function 1 */<br>
+    fun1()<br>
+    {<br>
+        number = 20;<br>
+        printf("I am in function fun1. My value is %d", number);<br>
+    }<br>
+    /* This is function 1 */<br>
+    fun2()<br>
+    {<br>
+        printf("\nI am in function fun2. My value is %d", number);<br>
+    }<br><br>
+    
+    I am in function main. My value is 10<br>
+    I am in function fun1. My value is 20<br>
+    I am in function fun2. My value is 20<br><br>
+    
+    Here the global variable number is available to all three functions and thus, if one function changes the value of the variable, it gets changed in every function.
+    <br><br><br>
+    
+    Note: Declaring the storage class as global or external for all the variables in a program can waste a lot of memory space because these variables have a lifetime till the end of the program. Thus, variables, which are not needed till the end of the program, will still occupy the memory and thus, memory will be wasted.
+    <br><br>
+    extern keyword<br>
+    The extern keyword is used with a variable to inform the compiler that this variable is declared somewhere else. The extern declaration does not allocate storage for variables.
+    <br><br>
+    extern keyword in c<br><br><br>
+    
+    
+    Problem when extern is not used<br>
+    int main()<br>
+    {<br>
+        a = 10;     //Error: cannot find definition of variable 'a'<br>
+        printf("%d", a);    <br>
+    }<br><br>
+    
+    Example using extern in same file<br>
+    int main()<br>
+    {<br><br>
+        extern int x;   //informs the compiler that it is defined somewhere else<br>
+        x = 10;      <br>
+        printf("%d", x);    <br>
+    }<br>
+    int x;      //Global variable x<br>
+    Static variables<br>
+    Scope: Local to the block in which the variable is defined<br><br>
+    
+    Default initial value: 0(Zero).<br><br>
+    
+    Lifetime: Till the whole program doesn't finish its execution.<br><br>
+    
+    A static variable tells the compiler to persist/save the variable until the end of program. Instead of creating and destroying a variable every time when it comes into and goes out of scope, static variable is initialized only once and remains into existence till the end of the program. A static variable can either be internal or external depending upon the place of declaration. Scope of internal static variable remains inside the function in which it is defined. External static variables remain restricted to scope of file in which they are declared.
+    <br><br>
+    They are assigned 0 (zero) as default value by the compiler.
+    <br><br>
+    #include<stdio.h><br><br>
+    
+    void test();    //Function declaration (discussed in next topic)<br><br>
+     
+    int main()<br>
+    {<br>
+        test();<br>
+        test();<br>
+        test();<br>
+    }<br>
+    <br>
+    void test()<br>
+    {<br>
+        static int a = 0;       //a static variable<br>
+        a = a + 1;<br>
+        printf("%d\t",a);<br>
+    }<br><br>
+    
+    1 2 3<br><br>
+    
+    Register variable<br>
+    Scope: Local to the function in which it is declared.
+    <br><br>
+    Default initial value: Any random value i.e garbage value
+    <br><br>
+    Lifetime: Till the end of function/method block, in which the variable is defined.
+    <br><br>
+    Register variables inform the compiler to store the variable in CPU register instead of memory. Register variables have faster accessibility than a normal variable. Generally, the frequently used variables are kept in registers. But only a few variables can be placed inside registers. One application of register storage class can be in using loops, where the variable gets used a number of times in the program, in a very short span of time.
+    <br><br>
+    NOTE: We can never get the address of such variables.
+    <br><br> 
+    Syntax :
+    <br><br>
+    register int number;<br>
+    Note: Even though we have declared the storage class of our variable number as register, we cannot surely say that the value of the variable would be stored in a register. This is because the number of registers in a CPU are limited. Also, CPU registers are meant to do a lot of important work. Thus, sometimes they may not be free. In such scenario, the variable works as if its storage class is auto.
+    <br><br>
+    Which storage class should be used and when<br>
+    To improve the speed of execution of the program and to carefully use the memory space occupied by the variables, following points should be kept in mind while using storage classes:
+    <br><br>
+    We should use static storage class only when we want the value of the variable to remain same every time we call it using different function calls.
+    We should use register storage class only for those variables that are used in our program very oftenly. CPU registers are limited and thus should be used carefully.
+    We should use external or global storage class only for those variables that are being used by almost all the functions in the program.
+    If we do not have the purpose of any of the above mentioned storage classes, then we should use the automatic storage class.
+
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+              <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+    
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Java Home </title>
+    <link rel="stylesheet" type="text/css" href="./css/1computernework.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">JAVA PROGRAMMING</a></h2>
+                    <span></span>
+                    </header>
+                    <p>As per dictionary, <b>abstraction</b> is the quality of dealing with ideas rather than events. For example, when you consider the case of e-mail, complex details such as what happens as soon as you send an e-mail, the protocol your e-mail server uses are hidden from the user. Therefore, to send an e-mail you just need to type the content, mention the address of the receiver, and click send.</p>
+                    <p>Likewise in Object-oriented programming, abstraction is a process of hiding the implementation details from the user, only the functionality will be provided to the user. In other words, the user will have the information on what the object does instead of how it does it.</p>
+                    <p>In Java, abstraction is achieved using Abstract classes and interfaces.</p>
+                    <h2>Abstract Class </h2>
+                    <p>A class which contains the <b>abstract</b> keyword in its declaration is known as abstract class.</p>
+                    <ul class="list">
+                    <li><p>Abstract classes may or may not contain <i>abstract methods</i>, i.e., methods without body ( public void get(); )</p></li>
+                    <li><p>But, if a class has at least one abstract method, then the class <b>must</b> be declared abstract.</p></li>
+                    <li><p>If a class is declared abstract, it cannot be instantiated.</p></li>
+                    <li><p>To use an abstract class, you have to inherit it from another class, provide implementations to the abstract methods in it.</p></li>
+                    <li><p>If you inherit an abstract class, you have to provide implementations to all the abstract methods in it.</p></li>
+                    </ul>
+                    <h3>Example</h3>
+                    <p>This section provides you an example of the abstract class. To create an abstract class, just use the <b>abstract</b> keyword before the class keyword, in the class declaration.</p>
+                    <pre class="prettyprint notranslate">
+                    /* File name : Employee.java */
+                    public abstract class Employee {
+                       private String name;
+                       private String address;
+                       private int number;
+                    
+                       public Employee(String name, String address, int number) {
+                          System.out.println("Constructing an Employee");
+                          this.name = name;
+                          this.address = address;
+                          this.number = number;
+                       }
+                       
+                       public double computePay() {
+                         System.out.println("Inside Employee computePay");
+                         return 0.0;
+                       }
+                       
+                       public void mailCheck() {
+                          System.out.println("Mailing a check to " + this.name + " " + this.address);
+                       }
+                    
+                       public String toString() {
+                          return name + " " + address + " " + number;
+                       }
+                    
+                       public String getName() {
+                          return name;
+                       }
+                     
+                       public String getAddress() {
+                          return address;
+                       }
+                       
+                       public void setAddress(String newAddress) {
+                          address = newAddress;
+                       }
+                     
+                       public int getNumber() {
+                          return number;
+                       }
+                    }
+                    </pre>
+                    <p>You can observe that except abstract methods the Employee class is same as normal class in Java. The class is now abstract, but it still has three fields, seven methods, and one constructor.</p>
+                    <p>Now you can try to instantiate the Employee class in the following way &minus;</p>
+                    <pre class="prettyprint notranslate">
+                    /* File name : AbstractDemo.java */
+                    public class AbstractDemo {
+                    
+                       public static void main(String [] args) {
+                          /* Following is not allowed and would raise error */
+                          Employee e = new Employee("George W.", "Houston, TX", 43);
+                          System.out.println("\n Call mailCheck using Employee reference--");
+                          e.mailCheck();
+                       }
+                    }
+                    </pre>
+                    <p>When you compile the above class, it gives you the following error &minus;</p>
+                    <pre class="result notranslate">
+                    Employee.java:46: Employee is abstract; cannot be instantiated
+                          Employee e = new Employee("George W.", "Houston, TX", 43);
+                                       ^
+                    1 error
+                    </pre>
+                    <h2>Inheriting the Abstract Class</h2>
+                    <p>We can inherit the properties of Employee class just like concrete class in the following way &minus;</p>
+                    <h3>Example</h3>
+                    <pre class="prettyprint notranslate">
+                    /* File name : Salary.java */
+                    public class Salary extends Employee {
+                       private double salary;   // Annual salary
+                       
+                       public Salary(String name, String address, int number, double salary) {
+                          super(name, address, number);
+                          setSalary(salary);
+                       }
+                       
+                       public void mailCheck() {
+                          System.out.println("Within mailCheck of Salary class ");
+                          System.out.println("Mailing check to " + getName() + " with salary " + salary);
+                       }
+                     
+                       public double getSalary() {
+                          return salary;
+                       }
+                       
+                       public void setSalary(double newSalary) {
+                          if(newSalary &gt;= 0.0) {
+                             salary = newSalary;
+                          }
+                       }
+                       
+                       public double computePay() {
+                          System.out.println("Computing salary pay for " + getName());
+                          return salary/52;
+                       }
+                    }
+                    </pre>
+                    <p>Here, you cannot instantiate the Employee class, but you can instantiate the Salary Class, and using this instance you can access all the three fields and seven methods of Employee class as shown below.</p>
+                    <pre class="prettyprint notranslate">
+                    /* File name : AbstractDemo.java */
+                    public class AbstractDemo {
+                    
+                       public static void main(String [] args) {
+                          Salary s = new Salary("Mohd Mohtashim", "Ambehta, UP", 3, 3600.00);
+                          Employee e = new Salary("John Adams", "Boston, MA", 2, 2400.00);
+                          System.out.println("Call mailCheck using Salary reference --");
+                          s.mailCheck();
+                          System.out.println("\n Call mailCheck using Employee reference--");
+                          e.mailCheck();
+                       }
+                    }
+                    </pre>
+                    <p>This produces the following result &minus;</p>
+                    <h3>Output</h3>
+                    <pre class="result notranslate">
+                    Constructing an Employee
+                    Constructing an Employee
+                    Call mailCheck using Salary reference --
+                    Within mailCheck of Salary class 
+                    Mailing check to Mohd Mohtashim with salary 3600.0
+                    
+                     Call mailCheck using Employee reference--
+                    Within mailCheck of Salary class 
+                    Mailing check to John Adams with salary 2400.0
+                    </pre>
+                    <h2>Abstract Methods</h2>
+                    <p>If you want a class to contain a particular method but you want the actual implementation of that method to be determined by child classes, you can declare the method in the parent class as an abstract.</p>
+                    <ul class="list">
+                    <li><p><b>abstract</b> keyword is used to declare the method as abstract.</p></li>
+                    <li><p>You have to place the <b>abstract</b> keyword before the method name in the method declaration.</p></li>
+                    <li><p>An abstract method contains a method signature, but no method body.</p></li>
+                    <li><p>Instead of curly braces, an abstract method will have a semoi colon (;) at the end.</p></li>
+                    </ul>
+                    <p>Following is an example of the abstract method.</p>
+                    <h3>Example</h3>
+                    <pre class="prettyprint notranslate">
+                    public abstract class Employee {
+                       private String name;
+                       private String address;
+                       private int number;
+                       
+                       public abstract double computePay();
+                       // Remainder of class definition
+                    }
+                    </pre>
+                    <p>Declaring a method as abstract has two consequences &minus;</p>
+                    <ul class="list">
+                    <li><p>The class containing it must be declared as abstract.</p></li>
+                    <li><p>Any class inheriting the current class must either override the abstract method or declare itself as abstract.</p></li>
+                    </ul>
+                    <p><b>Note</b> &minus; Eventually, a descendant class has to implement the abstract method; otherwise, you would have a hierarchy of abstract classes that cannot be instantiated.</p>
+                    <p>Suppose Salary class inherits the Employee class, then it should implement the <b>computePay()</b> method as shown below &minus;</p>
+                    <pre class="prettyprint notranslate">
+                    /* File name : Salary.java */
+                    public class Salary extends Employee {
+                       private double salary;   // Annual salary
+                      
+                       public double computePay() {
+                          System.out.println("Computing salary pay for " + getName());
+                          return salary/52;
+                       }
+                       // Remainder of class definition
+                    }
+                    </pre>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+                    
+                    <hr/>
+                    <div class="botton">
+                    <a href="./Java - Polymorphism.html" class="previous">&laquo; Previous</a>
+                    <a href="./Java - Encapsulation.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2> JAVA PROGRAMMING </h2>
+                <ul>
+                   
+        <li><a href="#home" data-after="JAVA - Home">Home</a></li>
+        <li><a href="./JAVA INTRO.html" data-after="javaintro">Java Intro</a>
+         
+         
+      <li><a href="./JAVA ENVIROMENT SETUP.html" data-after="enviromentsetup">Java - Enviroment Setup</a><br> </li>
+      <li><a href="./Java - Basic Syntax.html" data-after="basicsyntax">Java - Basic Syntax</a><br></li>
+        <li><a href="./Java- Comments.html" data-after="comments">Java- Comments</a></li>
+        <li><a href="./Java- Variable.html" data-after="variable">Java- Variable</a></li>
+        <li><a href="./Java- Data Type.html" data-after="datatype">Java- Data Type</a></li>
+
+        <li><a href="./Java- Type casting.html" data-after="typecasting">Java- Type casting</a></li>
+        <li><a href="./Java- Operators.html" data-after="operators">Java- Operators</a></li>
+        <li><a href="./Java- String.html" data-after="string">Java- String</a></li>
+        <li><a href="./Java- Math.html" data-after="math">Java- Math</a></li>
+        <li><a href="./Java- Booleans.html" data-after="booleans">Java- Booleans</a></li>
+        <li><a href="./Java- If....Else.html" data-after="ifelse">Java- If....Else</a></li>
+        <li><a href="./Java- Switch.html" data-after="switch">Java- Switch</a></li>
+        <li><a href="./Java- While Loop.html" data-after="while">Java- While Loop</a></li>
+        <li><a href="./Java- Do While Loop.html" data-after="dowhile">Java- Do While Loop</a></li>
+        <li><a href="./Java- For Loop.html" data-after="for">Java- For Loop</a></li>
+        <li><a href="./Java- Break....Continue.html" data-after="break">Java- Break/Continue</a></li>
+        <li><a href="./Java- Array.html" data-after="array">Java- Array</a></li>     
+        
+        <li><a href="#OOP" data-after="array">Java- Object Oriented</a></li>  
+
+
+
+
+        <li><a href="./Java - Inheritanc.html" data-after="switch">Java - Inheritanc</a></li>
+        <li><a href="./Java - Overriding.html" data-after="while">Java - Overriding</a></li>
+        <li><a href="./Java - Polymorphism.html" data-after="dowhile">Java - Polymorphism</a></li>
+        <li><a href="./Java - Abstraction.html" data-after="for">Java - Abstraction</a></li>
+        <li><a href="./Java - Encapsulation.html" data-after="for">Java - Encapsulation</a></li>
+        <li><a href="./Java - Interfaces.html" data-after="break">Java - Interfaces</a></li>
+        <li><a href="./Java - Packages.html" data-after="array">Java - Packages</a></li>
+
+
+       
+
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+                 <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+    
+        </div>
+    </body>
+
+</html>

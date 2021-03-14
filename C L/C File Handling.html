@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1"> C File Handling</h1>
+<ul class="points">
+
+   
+    In this tutorial, you will learn about file handling in C. You will learn to handle standard I/O in C using fprintf(), fscanf(), fread(), fwrite(), fseek() etc. with the help of examples.
+    <br>
+    <br>
+    A file is a container in computer storage devices used for storing data.
+    <br><br>
+    Why files are needed?<br>
+    When a program is terminated, the entire data is lost. Storing in a file will preserve your data even if the program terminates.<br>
+    If you have to enter a large number of data, it will take a lot of time to enter them all.<br>
+    However, if you have a file containing all the data, you can easily access the contents of the file using a few commands in C.<br>
+    You can easily move your data from one computer to another without any changes.<br>
+    Types of Files<br>
+    When dealing with files, there are two types of files you should know about:<br>
+    <br>
+    Text files<br>
+    Binary files<br>
+    1. Text files<br>
+    Text files are the normal .txt files. You can easily create text files using any simple text editors such as Notepad.
+    <br><br>
+    When you open those files, you'll see all the contents within the file as plain text. You can easily edit or delete the contents.
+    <br><br>
+    They take minimum effort to maintain, are easily readable, and provide the least security and takes bigger storage space.
+    <br><br>
+    2. Binary files<br>
+    Binary files are mostly the .bin files in your computer.<br>
+    <br>
+    Instead of storing data in plain text, they store it in the binary form (0's and 1's).<br>
+    <br>
+    They can hold a higher amount of data, are not readable easily, and provides better security than text files.
+    <br><br>
+    File Operations<br>
+    In C, you can perform four major operations on files, either text or binary:<br>
+    <br>
+    Creating a new file<br>
+    Opening an existing file<br>
+    Closing a file<br>
+    Reading from and writing information to a file<br>
+    Working with files<br>
+    When working with files, you need to declare a pointer of type file. This declaration is needed for communication between the file and the program.
+    <br><br>
+    FILE *fptr;<br>
+    Opening a file - for creation and edit<br>
+    Opening a file is performed using the fopen() function defined in the stdio.h header file.<br>
+    <br>
+    The syntax for opening a file in standard I/O is:<br>
+    <br>
+    ptr = fopen("fileopen","mode");<br>
+    For example,<br>
+    <br>
+    fopen("E:\\cprogram\\newprogram.txt","w");<br>
+    <br>
+    fopen("E:\\cprogram\\oldprogram.bin","rb");<br>
+    Let's suppose the file newprogram.txt doesn't exist in the location E:\cprogram. The first function creates a new file named newprogram.txt and opens it for writing as per the mode 'w'.<br>
+    The writing mode allows you to create and edit (overwrite) the contents of the file.<br>
+    Now let's suppose the second binary file oldprogram.bin exists in the location E:\cprogram. The second function opens the existing file for reading in binary mode 'rb'.<br>
+    The reading mode only allows you to read the file, you cannot write into the file.<br>
+    Opening Modes in Standard I/O<br>
+    Mode	Meaning of Mode	During Inexistence of file<br>
+    r	Open for reading.	If the file does not exist, fopen() returns NULL.<br>
+    rb	Open for reading in binary mode.	If the file does not exist, fopen() returns NULL.<br>
+    w	Open for writing.	If the file exists, its contents are overwritten.<br>
+    <br>
+                    If the file does not exist, it will be created.<br>
+    wb	Open for writing in binary mode.	If the file exists, its contents are overwritten.<br>
+    <br>
+                    If the file does not exist, it will be created.<br>
+    a	Open for append.<br>
+    <br>
+                    Data is added to the end of the file.	If the file does not exist, it will be created.<br>
+    ab	Open for append in binary mode.<br>
+    <br>
+                    Data is added to the end of the file.	If the file does not exist, it will be created.<br>
+    r+	Open for both reading and writing.	If the file does not exist, fopen() returns NULL.<br>
+    rb+	Open for both reading and writing in binary mode.	If the file does not exist, fopen() returns NULL.<br>
+    w+	Open for both reading and writing.	If the file exists, its contents are overwritten.<br>
+    <br>
+                    If the file does not exist, it will be created.<br>
+    wb+	Open for both reading and writing in binary mode.	If the file exists, its contents are overwritten.<br>
+    <br>
+                    If the file does not exist, it will be created.<br>
+    a+	Open for both reading and appending.	If the file does not exist, it will be created.<br>
+    ab+	Open for both reading and appending in binary mode.	If the file does not exist, it will be created.<br>
+    Closing a File<br>
+    The file (both text and binary) should be closed after reading/writing.<br>
+    <br>
+    Closing a file is performed using the fclose() function.<br>
+    <br>
+    fclose(fptr);<br>
+    Here, fptr is a file pointer associated with the file to be closed.<br>
+    <br>
+    Reading and writing to a text file<br>
+    For reading and writing to a text file, we use the functions fprintf() and fscanf().<br>
+    <br>
+    <br>
+    They are just the file versions of printf() and scanf(). The only difference is that fprint() and fscanf() expects a pointer to the structure FILE.
+    <br><br>
+    Example 1: Write to a text file<br>
+    #include <stdio.h><br>
+    #include <stdlib.h><br>
+        <br>
+    int main()<br>
+    {<br>
+       int num;<br>
+       FILE *fptr;<br>
+       <br>
+       // use appropriate location if you are using MacOS or Linux<br>
+       fptr = fopen("C:\\program.txt","w");<br>
+       <br>
+       if(fptr == NULL)<br>
+       {<br>
+          printf("Error!");<br>   
+          exit(1);             <br>
+       }<br>
+       <br>
+       printf("Enter num: ");<br>
+       scanf("%d",&num);<br>
+       <br>
+       fprintf(fptr,"%d",num);<br>
+       fclose(fptr);<br>
+       <br>
+       return 0;<br>
+    }<br>
+    This program takes a number from the user and stores in the file program.txt.<br>
+    <br>
+    After you compile and run this program, you can see a text file program.txt created in C drive of your computer. When you open the file, you can see the integer you entered.
+    <br><br>
+    Example 2: Read from a text file<br>
+    #include <stdio.h><br>
+    #include <stdlib.h><br>
+        <br>
+    int main()<br>
+    {<br>
+       int num;<br>
+       FILE *fptr;<br>
+       <br>
+       if ((fptr = fopen("C:\\program.txt","r")) == NULL){<br>
+           printf("Error! opening file");<br>
+           <br>
+           // Program exits if the file pointer returns NULL.<br>
+           exit(1);<br>
+       }<br>
+       <br>
+       fscanf(fptr,"%d", &num);<br>
+       <br>
+       printf("Value of n=%d", num);<br>
+       fclose(fptr); <br>
+       <br>
+       return 0;<br>
+    }<br>
+    This program reads the integer present in the program.txt file and prints it onto the screen.<br>
+    <br>
+    If you successfully created the file from Example 1, running this program will get you the integer you entered.<br>
+    <br>
+    Other functions like fgetchar(), fputc() etc. can be used in a similar way.<br>
+    <br>
+    Reading and writing to a binary file<br>
+    Functions fread() and fwrite() are used for reading from and writing to a file on the disk respectively in case of binary files.<br>
+    <br>
+    Writing to a binary file<br>
+    To write into a binary file, you need to use the fwrite() function. The functions take four arguments:<br>
+    <br>
+    address of data to be written in the disk<br>
+    size of data to be written in the disk<br>
+    number of such type of data<br>
+    pointer to the file where you want to write.<br>
+    fwrite(addressData, sizeData, numbersData, pointerToFile);<br>
+    Example 3: Write to a binary file using fwrite()<br>
+    #include <stdio.h><br>
+    #include <stdlib.h><br>
+        <br>
+    struct threeNum<br>
+    {<br>
+       int n1, n2, n3;<br>
+    };<br>
+    <br>
+    int main()<br>
+    {<br>
+       int n;<br>
+       struct threeNum num;<br>
+       FILE *fptr;<br>
+       <br>
+       if ((fptr = fopen("C:\\program.bin","wb")) == NULL){<br>
+           printf("Error! opening file");<br>
+           <br>
+           // Program exits if the file pointer returns NULL.<br>
+           exit(1);<br>
+       }<br>
+       <br>
+       for(n = 1; n < 5; ++n)<br><br>
+       {<br>
+          num.n1 = n;<br>
+          num.n2 = 5*n;<br>
+          num.n3 = 5*n + 1;<br>
+          fwrite(&num, sizeof(struct threeNum), 1, fptr); <br>
+       }<br>
+       fclose(fptr); <br>
+       <br>
+       return 0;<br>
+    }<br>
+    In this program, we create a new file program.bin in the C drive.<br>
+    <br>
+    We declare a structure threeNum with three numbers - n1, n2 and n3, and define it in the main function as num.<br>
+    <br>
+    Now, inside the for loop, we store the value into the file using fwrite().<br><br>
+    
+    The first parameter takes the address of num and the second parameter takes the size of the structure threeNum.
+    <br><br>
+    Since we're only inserting one instance of num, the third parameter is 1. And, the last parameter *fptr points to the file we're storing the data.
+    <br><br>
+    Finally, we close the file.<br>
+    <br>
+    Reading from a binary file<br>
+    Function fread() also take 4 arguments similar to the fwrite() function as above.<br>
+    <br>
+    fread(addressData, sizeData, numbersData, pointerToFile);<br>
+    Example 4: Read from a binary file using fread()<br>
+    #include <stdio.h><br>
+    #include <stdlib.h><br>
+        <br>
+    struct threeNum<br>
+    {<br>
+       int n1, n2, n3;<br>
+    };<br>
+    <br>
+    int main()<br>
+    {<br>
+       int n;<br>
+       struct threeNum num;<br>
+       FILE *fptr;<br>
+       <br>
+       if ((fptr = fopen("C:\\program.bin","rb")) == NULL){<br>
+           printf("Error! opening file");<br>
+           <br>
+           // Program exits if the file pointer returns NULL.<br>
+           exit(1);<br>
+       }<br>
+       <br>
+       for(n = 1; n < 5; ++n)<br>
+       {<br>
+          fread(&num, sizeof(struct threeNum), 1, fptr); <br>
+          printf("n1: %d\tn2: %d\tn3: %d", num.n1, num.n2, num.n3);<br>
+       }<br>
+       fclose(fptr); <br>
+       <br>
+       return 0;<br>
+       <br>    }
+    In this program, you read the same file program.bin and loop through the records one by one.<br>
+    <br>
+    In simple terms, you read one threeNum record of threeNum size from the file pointed by *fptr into the structure num.<br>
+    <br>
+    You'll get the same records you inserted in Example 3.<br>
+    <br>
+    Getting data using fseek()<br>
+    If you have many records inside a file and need to access a record at a specific position, you need to loop through all the records before it to get the record.
+    <br><br>
+    This will waste a lot of memory and operation time. An easier way to get to the required data can be achieved using fseek().<br>
+    <br>
+    As the name suggests, fseek() seeks the cursor to the given record in the file.<br>
+    <br>
+    Syntax of fseek()<br>
+    fseek(FILE * stream, long int offset, int whence);<br>
+    The first parameter stream is the pointer to the file. The second parameter is the position of the record to be found, and the third parameter specifies the location where the offset starts.
+    <br><br>
+    Different whence in fseek()<br>
+    Whence	Meaning<br>
+    SEEK_SET	Starts the offset from the beginning of the file.<br>
+    SEEK_END	Starts the offset from the end of the file.<br>
+    SEEK_CUR	Starts the offset from the current location of the cursor in the file.<br>
+    Example 5: fseek()<br>
+    #include <stdio.h><br>
+    #include <stdlib.h><br>
+        <br>
+    struct threeNum<br>
+    {<br>
+       int n1, n2, n3;<br>
+    };<br>
+    <br>
+    int main()<br>
+    {<br>
+       int n;<br>
+       struct threeNum num;<br>
+       FILE *fptr;<br>
+       <br>
+       if ((fptr = fopen("C:\\program.bin","rb")) == NULL){<br>
+           printf("Error! opening file");<br>
+           <br>
+           // Program exits if the file pointer returns NULL.<br>
+           exit(1);<br>
+       }<br>
+       <br>
+       // Moves the cursor to the end of the file<br>
+       fseek(fptr, -sizeof(struct threeNum), SEEK_END);<br><br>
+    
+       for(n = 1; n < 5; ++n)<br>
+       {<br>
+          fread(&num, sizeof(struct threeNum), 1, fptr); <br>
+          printf("n1: %d\tn2: %d\tn3: %d\n", num.n1, num.n2, num.n3);<br>
+          fseek(fptr, -2*sizeof(struct threeNum), SEEK_CUR);<br>
+       }<br>
+       fclose(fptr); <br>
+       <br>
+       return 0;<br>
+    }<br>
+    This program will start reading the records from the file program.bin in the reverse order (last to first) and prints it.
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+               <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+        </div>
+    </body>
+
+</html>

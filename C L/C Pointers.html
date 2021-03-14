@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+            <ul>
+            <li > <a class="active" href=" # ">HOME</a> </li>
+                <li > <a href=" # ">SERVICES</a> </li>
+                <li > <a href=" # ">CONTACT</a> </li>
+                <li > <a href=" # ">ABOUT</a> </li>
+            </ul>
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">C Pointers</h1>
+<ul class="points">
+    
+    In this tutorial, you'll learn about pointers; what pointers are, how do you use them and the common mistakes you might face when working with them with the help of examples.
+    <br>
+    <br>
+    Pointers are powerful features of C and C++ programming. Before we learn pointers, let's learn about addresses in C programming.
+    <br><br>
+    Address in C<br>
+    If you have a variable var in your program, &var will give you its address in the memory.
+    <br><br>
+    We have used address numerous times while using the scanf() function.
+    <br><br>
+    scanf("%d", &var);<br>
+    Here, the value entered by the user is stored in the address of var variable. Let's take a working example.
+    <br><br>
+    #include <stdio.h><br>
+    int main()<br>
+    {<br>
+      int var = 5;<br>
+      printf("var: %d\n", var);<br>
+      <br>
+      // Notice the use of & before var<br>
+      printf("address of var: %p", &var); <br> 
+      return 0;<br>
+    }<br>
+    Output<br>
+    
+    var: 5 <br>
+    address of var: 2686778<br>
+    Note: You will probably get a different address when you run the above code.<br><br>
+    
+    C Pointers<br>
+    Pointers (pointer variables) are special variables that are used to store addresses rather than values.
+    <br><br>
+    Pointer Syntax<br>
+    Here is how we can declare pointers.<br><br>
+    
+    int* p;<br>
+    Here, we have declared a pointer p of int type.<br><br>
+    
+    You can also declare pointers in these ways.<br><br>
+    
+    int *p1;<br>
+    int * p2;<br>
+    Let's take another example of declaring pointers.<br>
+    
+    int* p1, p2;<br>
+    Here, we have declared a pointer p1 and a normal variable p2.<br><br>
+    
+    Assigning addresses to Pointers<br>
+    Let's take an example.<br><br>
+    
+    int* pc, c;<br>
+    c = 5;<br>
+    pc = &c;<br>
+    Here, 5 is assigned to the c variable. And, the address of c is assigned to the pc pointer.<br>
+    <br>
+    Get Value of Thing Pointed by Pointers<br>
+    To get the value of the thing pointed by the pointers, we use the * operator. For example:<br><br>
+    
+    int* pc, c;<br>
+    c = 5;<br>
+    pc = &c;<br>
+    printf("%d", *pc);   // Output: 5<br>
+    Here, the address of c is assigned to the pc pointer. To get the value stored in that address, we used *pc.
+    <br><br>
+    Note: In the above example, pc is a pointer, not *pc. You cannot and should not do something like *pc = &c;
+    <br><br>
+    By the way, * is called the dereference operator (when working with pointers). It operates on a pointer and gives the value stored in that pointer.
+    <br><br>
+    Changing Value Pointed by Pointers<br>
+    Let's take an example.<br><br>
+    
+    int* pc, c;<br>
+    c = 5;<br>
+    pc = &c;<br>
+    c = 1;<br>
+    printf("%d", c);    // Output: 1<br>
+    printf("%d", *pc);  // Ouptut: 1<br>
+    We have assigned the address of c to the pc pointer.<br>
+    <br>
+    Then, we changed the value of c to 1. Since pc and the address of c is the same, *pc gives us 1.<br><br>
+    
+    Let's take another example.<br><br>
+    
+    int* pc, c;<br>
+    c = 5;<br>
+    pc = &c;<br>
+    *pc = 1;<br>
+    printf("%d", *pc);  // Ouptut: 1<br>
+    printf("%d", c);    // Output: 1<br>
+    We have assigned the address of c to the pc pointer.<br><br>
+    
+    Then, we changed *pc to 1 using *pc = 1;. Since pc and the address of c is the same, c will be equal to 1.
+    <br><br>
+    Let's take one more example.<br><br>
+    
+    int* pc, c, d;<br>
+    c = 5;<br>
+    d = -15;<br><br>
+    
+    pc = &c; printf("%d", *pc); // Output: 5<br>
+    pc = &d; printf("%d", *pc); // Ouptut: -15<br><br>
+    
+    Initially, the address of c is assigned to the pc pointer using pc = &c;. Since c is 5, *pc gives us 5.
+    <br><br>
+    Then, the address of d is assigned to the pc pointer using pc = &d;. Since d is -15, *pc gives us -15.
+    <br><br>
+    Example: Working of Pointers<br>
+    Let's take a working example.<br><br>
+    
+    #include <stdio.h><br>
+    int main()<br>
+    {<br>
+       int* pc, c;<br><br>
+       
+       c = 22;<br>
+       printf("Address of c: %p\n", &c);<br>
+       printf("Value of c: %d\n\n", c);  // 22<br><br>
+       
+       pc = &c;<br>
+       printf("Address of pointer pc: %p\n", pc);<br>
+       printf("Content of pointer pc: %d\n\n", *pc); // 22<br><br>
+       
+       c = 11;<br>
+       printf("Address of pointer pc: %p\n", pc);<br>
+       printf("Content of pointer pc: %d\n\n", *pc); // 11<br><br>
+       
+       *pc = 2;<br>
+       printf("Address of c: %p\n", &c);<br>
+       printf("Value of c: %d\n\n", c); // 2<br>
+       return 0;<br>
+    }<br>
+    Output<br><br>
+    
+    Address of c: 2686784<br>
+    Value of c: 22<br><br>
+    
+    Address of pointer pc: 2686784<br>
+    Content of pointer pc: 22
+    <br><br>
+    Address of pointer pc: 2686784<br>
+    Content of pointer pc: 11<br><br>
+    
+    Address of c: 2686784<br>
+    Value of c: 2<br>
+    Explanation of the program
+    <br><br>
+    int* pc, c;<br>
+    A pointer variable and a normal variable is created.<br><br>
+    
+    Here, a pointer pc and a normal variable c, both of type int, is created.<br>
+    Since pc and c are not initialized at initially, pointer pc points to either no address or a random address. And, variable c has an address but contains random garbage value.
+    <br><br>
+    c = 22;<br>
+    22 is assigned to variable c.<br><br>
+    
+    This assigns 22 to the variable c. That is, 22 is stored in the memory location of variable c.
+    <br><br>
+    pc = &c;<br>
+    Address of variable c is assigned to pointer pc.<br><br>
+    
+    This assigns the address of variable c to the pointer pc.<br><br>
+     
+    c = 11;<br>
+    11 is assigned to variable c.<br><br>
+    
+    This assigns 11 to variable c.<br><br>
+     
+    *pc = 2;<br>
+    5 is assigned to pointer variable's address.<br><br>
+    
+    This change the value at the memory location pointed by the pointer pc to 2.<br>
+    Common mistakes when working with pointers<br>
+    Suppose, you want pointer pc to point to the address of c. Then,<br><br>
+    
+    int c, *pc;<br><br>
+    
+    // pc is address but c is not<br>
+    pc = c; // Error<br>
+    
+    // &c is address but *pc is not<br>
+    *pc = &c; // Error<br><br>
+    
+    // both &c and pc are addresses<br>
+    pc = &c;<br><br>
+    
+    // both c and *pc values <br>
+    *pc = c;<br>
+    Here's an example of pointer syntax beginners often find confusing.<br><br>
+    
+    #include <stdio.h><br>
+    int main() {<br>
+       int c = 5;<br>
+       int *p = &c;<br><br>
+    
+       printf("%d", *p);  // 5<br>
+       return 0; <br>
+    }<br>
+    Why didn't we get an error when using int *p = &c;?<br><br>
+    
+    It's because<br><br>
+    
+    int *p = &c;<br>
+    is equivalent to<br><br>
+    
+    int *p:<br>
+    p = &c;<br>
+    In both cases, we are creating a pointer p (not *p) and assigning &c to it.
+    <br><br>
+    To avoid this confusion, we can use the statement like this:
+    <br><br>
+    int* p = &c;
+
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+                <!-- start footer-->
+
+<footer class="footer">
+    <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </footer>
+    <!-- end of footer -->
+    
+        </div>
+    </body>
+
+</html>

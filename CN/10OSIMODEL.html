@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/1computernework.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">osi model</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">OSI Model</h1>
+<ul class="points">
+<li>OSI stands for <strong>Open System Interconnection</strong> is a reference model that describes how information from a <a href="software">software</a> application in one <a href="what-is-computer">computer</a> moves through a physical medium to the software application in another computer.</li>
+<li>OSI consists of seven layers, and each layer performs a particular network function.</li>
+<li>OSI model was developed by the International Organization for Standardization (ISO) in 1984, and it is now considered as an architectural model for the inter-computer communications.</li>
+<li>OSI model divides the whole task into seven smaller and manageable tasks. Each layer is assigned a particular task.</li>
+<li>Each layer is self-contained, so that task assigned to each layer can be performed independently.</li>
+</ul>
+
+<h2 class="h2">Characteristics of OSI Model:</h2>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model.png" alt="OSI Model"/>
+<ul class="points">
+<li>The OSI model is divided into two layers: upper layers and lower layers.</li>
+<li>The upper layer of the OSI model mainly deals with the application related issues, and they are implemented only in the software. The application layer is closest to the end user. Both the end user and the application layer interact with the software applications. An upper layer refers to the layer just above another layer.</li>
+<li>The lower layer of the OSI model deals with the data transport issues. The data link layer and the physical layer are implemented in hardware and software. The physical layer is the lowest layer of the OSI model and is closest to the physical medium. The physical layer is mainly responsible for placing the information on the physical medium.</li>
+</ul>
+
+<h2 class="h2">Functions of the OSI Layers</h2>
+<p>There are the seven OSI layers. Each layer has different functions. A list of seven layers are given below:</p>
+<ol class="points">
+    <li>Physical Layer</li>
+    <li>Data-Link Layer</li>
+    <li>Network Layer</li>
+    <li>Transport Layer</li>
+    <li>Session Layer</li>
+    <li>Presentation Layer</li>
+    <li>Application Layer</li>
+</ol>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model2.png" alt="OSI Model"/>
+<h3 class="h3">Physical layer</h3>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model3.png" alt="OSI Model"/>
+<ul class="points">
+<li>The main functionality of the physical layer is to transmit the individual bits from one node to another node.</li>
+<li>It is the lowest layer of the OSI model.</li>
+<li>It establishes, maintains and deactivates the physical connection.</li>
+<li>It specifies the mechanical, electrical and procedural network interface specifications.</li>
+</ul>
+<h2 class="h4">Functions of a Physical layer:</h2>
+<ul class="points">
+    <li><strong>Line Configuration:</strong> It defines the way how two or more devices can be connected physically.</li>
+    <li><strong><a href="computer-network-transmission-modes">Data Transmission</a>:</strong> It defines the transmission mode whether it is simplex, half-duplex or full-duplex mode between the two devices on the network. </li>
+    <li><strong><a href="computer-network-topologies">Topology</a>:</strong> It defines the way how network devices are arranged.</li>
+    <li><strong>Signals:</strong> It determines the type of the signal used for transmitting the information.</li>
+    </ul>
+    
+    <h3 class="h3">Data-Link Layer</h3>
+    <img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model4.png" alt="OSI Model"/>
+    <ul class="points">
+    <li>This layer is responsible for the error-free transfer of data frames.</li>
+    <li>It defines the format of the data on the network.</li>
+    <li>It provides a reliable and efficient communication between two or more devices.</li>
+    <li>It is mainly responsible for the unique identification of each device that resides on a local network.</li>
+    <li>It contains two sub-layers:
+    <ul class="points">
+    <li><strong>Logical Link Control Layer</strong>
+    <ul class="points">
+    <li>It is responsible for transferring the packets to the Network layer of the receiver that is receiving.</li>
+    <li>It identifies the address of the network layer protocol from the header.</li>
+    <li>It also provides flow control.</li>
+    </ul>
+    </li>
+    <li><strong>Media Access Control Layer</strong>
+    <ul class="points">
+    <li>A Media access control layer is a link between the Logical Link Control layer and the network's physical layer.</li>
+    <li>It is used for transferring the packets over the network.</li>
+    </ul></li>
+    </ul></li>
+    </ul>
+    <h2 class="h4">Functions of the Data-link layer</h2>
+    <ul class="points">
+    <li><strong>Framing:</strong> The data link layer translates the physical's raw bit stream into packets known as Frames. The Data link layer adds the header and trailer to the frame. The header which is added to the frame contains the hardware destination and source address.</li>
+    </ul>
+
+    <img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model5.png" alt="OSI Model"/>
+<ul class="points">
+<li><strong>Physical Addressing:</strong> The Data link layer adds a header to the frame that contains a destination address. The frame is transmitted to the destination address mentioned in the header.</li>
+<li><strong>Flow Control:</strong> Flow control is the main functionality of the Data-link layer. It is the technique through which the constant data rate is maintained on both the sides so that no data get corrupted. It ensures that the transmitting station such as a server with higher processing speed does not exceed the receiving station, with lower processing speed.</li>
+<li><strong>Error Control:</strong> Error control is achieved by adding a calculated value CRC (Cyclic Redundancy Check) that is placed to the Data link layer's trailer which is added to the message frame before it is sent to the physical layer. If any error seems to occurr, then the receiver sends the acknowledgment for the retransmission of the corrupted frames. </li>
+<li><strong>Access Control:</strong> When two or more devices are connected to the same communication channel, then the data link layer protocols are used to determine which device has control over the link at a given time.</li>
+</ul>
+
+<h3 class="h3">Network Layer</h3>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model6.png" alt="OSI Model"/>
+<ul class="points">
+<li>It is a layer 3 that manages device addressing, tracks the location of devices on the network.</li>
+<li>It determines the best path to move data from source to the destination based on the network conditions, the priority of service, and other factors.</li>
+<li>The Data link layer is responsible for routing and forwarding the packets.</li>
+<li>Routers are the layer 3 devices, they are specified in this layer and used to provide the routing services within an internetwork.</li>
+<li>The protocols used to route the network traffic are known as Network layer protocols. Examples of protocols are IP and Ipv6.</li>
+</ul>
+<h2 class="h4">Functions of Network Layer:</h2>
+<ul class="points">
+<li><strong>Internetworking:</strong> An internetworking is the main responsibility of the network layer. It provides a logical connection between different devices.</li>
+<li><strong><a href="network-addressing">Addressing</a>:</strong> A Network layer adds the source and destination address to the header of the frame. Addressing is used to identify the device on the internet.</li>
+<li><strong><a href="computer-network-routing">Routing</a>:</strong> Routing is the major component of the network layer, and it determines the best optimal path out of the multiple paths from source to the destination.</li>
+<li><strong>Packetizing:</strong> A Network Layer receives the packets from the upper layer and converts them into packets. This process is known as Packetizing. It is achieved by internet protocol (IP).</li>
+</ul>
+
+<h3 class="h3">Transport Layer</h3>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model7.png" alt="OSI Model"/>
+<ul class="points">
+<li>The Transport layer is a Layer 4 ensures that messages are transmitted in the order in which they are sent and there is no duplication of data.</li>
+<li>The main responsibility of the transport layer is to transfer the data completely.</li>
+<li>It receives the data from the upper layer and converts them into smaller units known as segments.</li>
+<li>This layer can be termed as an end-to-end layer as it provides a point-to-point connection between source and destination to deliver the data reliably.</li>
+</ul>
+<p><strong>The two protocols used in this layer are:</strong></p>
+<ul class="points">
+<li><strong>Transmission Control Protocol</strong>
+<ul class="points">
+<li>It is a standard protocol that allows the systems to communicate over the internet. </li>
+<li>It establishes and maintains a connection between hosts.</li>
+<li>When data is sent over the TCP connection, then the TCP protocol divides the data into smaller units known as segments. Each segment travels over the internet using multiple routes, and they arrive in different orders at the destination. The transmission control protocol reorders the packets in the correct order at the receiving end.</li>
+</ul>
+</li>
+<li><strong>User Datagram Protocol</strong>
+<ul class="points">
+<li>User Datagram Protocol is a transport layer protocol.</li>
+<li>It is an unreliable transport protocol as in this case receiver does not send any acknowledgment when the packet is received, the sender does not wait for any acknowledgment. Therefore, this makes a protocol unreliable.</li>
+</ul>
+</li>
+</ul>
+<h2 class="h4">Functions of Transport Layer:</h2>
+<ul class="points">
+<li><strong>Service-point addressing:</strong> Computers run several programs simultaneously due to this reason, the transmission of data from source to the destination not only from one computer to another computer but also from one process to another process. The transport layer adds the header that contains the address known as a service-point address or port address. The responsibility of the network layer is to transmit the data from one computer to another computer and the responsibility of the transport layer is to transmit the message to the correct process.</li>
+<li><strong>Segmentation and reassembly:</strong> When the transport layer receives the message from the upper layer, it divides the message into multiple segments, and each segment is assigned with a sequence number that uniquely identifies each segment. When the message has arrived at the destination, then the transport layer reassembles the message based on their sequence numbers.</li> 
+<li><strong>Connection control:</strong> Transport layer provides two services Connection-oriented service and connectionless service. A connectionless service treats each segment as an individual packet, and they all travel in different routes to reach the destination. A connection-oriented service makes a connection with the transport layer at the destination machine before delivering the packets. In connection-oriented service, all the packets travel in the single route. </li>
+<li><strong>Flow control:</strong> The transport layer also responsible for flow control but it is performed end-to-end rather than across a single link.</li>
+<li><strong>Error control:</strong> The transport layer is also responsible for Error control. Error control is performed end-to-end rather than across the single link. The sender transport layer ensures that message reach at the destination without any error.</li>
+</ul>
+
+<h3 class="h3">Session Layer</h3>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model8.png" alt="OSI Model"/>
+<ul class="points">
+<li>It is a layer 3 in the OSI model.</li>
+<li>The Session layer is used to establish, maintain and synchronizes the interaction between communicating devices.</li>
+</ul>
+<h2 class="h4">Functions of Session layer:</h2>
+<ul class="points">
+<li><strong>Dialog control:</strong> Session layer acts as a dialog controller that creates a dialog between two processes or we can say that it allows the communication between two processes which can be either half-duplex or full-duplex. </li>
+<li><strong>Synchronization:</strong> Session layer adds some checkpoints when transmitting the data in a sequence. If some error occurs in the middle of the transmission of data, then the transmission will take place again from the checkpoint. This process is known as Synchronization and recovery.</li>
+</ul>
+<h3 class="h3">Presentation Layer</h3>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model9.png" alt="OSI Model"/>
+<ul class="points">
+<li>A Presentation layer is mainly concerned with the syntax and semantics of the information exchanged between the two systems.</li>
+<li>It acts as a data translator for a network.</li>
+<li>This layer is a part of the operating system that converts the data from one presentation format to another format.</li>
+<li>The Presentation layer is also known as the syntax layer. </li>
+</ul>
+<h2 class="h4">Functions of Presentation layer:</h2>
+<ul class="points">
+<li><strong>Translation:</strong> The processes in two systems exchange the information in the form of character strings, numbers and so on. Different computers use different encoding methods, the presentation layer handles the interoperability between the different encoding methods. It converts the data from sender-dependent format into a common format and changes the common format into receiver-dependent format at the receiving end.</li>
+<li><strong>Encryption:</strong> Encryption is needed to maintain privacy. Encryption is a process of converting the sender-transmitted information into another form and sends the resulting message over the network.</li>
+<li><strong>Compression:</strong> Data compression is a process of compressing the data, i.e., it reduces the number of bits to be transmitted. Data compression is very important in multimedia such as text, audio, video.</li>
+</ul>
+
+<h3 class="h3">Application Layer</h3>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/osi-model10.png" alt="OSI Model"/>
+<ul class="points">
+<li>An application layer serves as a window for users and application processes to access network service.</li>
+<li>It handles issues such as network transparency, resource allocation, etc.</li>
+<li>An application layer is not an application, but it performs the application layer functions.</li>
+<li>This layer provides the network services to the end-users.</li>
+</ul>
+<h2 class="h4">Functions of Application layer:</h2>
+<ul class="points">
+<li><strong>File transfer, access, and management (FTAM):</strong> An application layer allows a user to access the files in a remote computer, to retrieve the files from a computer and to manage the files in a remote computer.</li>
+<li><strong>Mail services:</strong> An application layer provides the facility for email forwarding and storage.</li>
+<li>Directory services: An application provides the distributed database sources and is used to provide that global information about various objects.</li>
+</ul>
+                    <div class="botton">
+                    <a href="./9networkmodel.html" class="previous">&laquo; Previous</a>
+                    <a href="./11tcpipmodel.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2> NETWORKING </h2>
+                <ul>
+                    <li><a href="1ComputerNetwork.html" > <i class="fa fa-qrcode"> </i> Computer Network </li>
+                        <li><a href="2introduction.html" > <i class="fa fa-qrcode"> </i> Introduction </li>
+                            <li><a href="3feature.html" > <i class="fa fa-qrcode"> </i> Features Of Computer network</li>
+                                <li><a href="4Architecture.html" > <i class="fa fa-qrcode"> </i> Computer Network Architecture </li>
+                                    <li><a href="5component.html" > <i class="fa fa-qrcode"> </i> Computer Network Components </li>
+                                        <li><a href="6networkType.html" > <i class="fa fa-qrcode"> </i> Computer Network Types</li>
+                                            <li><a href="7topology.html" > <i class="fass fa-qrcode"> </i> What is Topology?</li>
+                                                <li><a href="8transmisionmode.html" > <i class="fass fa-qrcode"> </i> Transmission modes</li>
+                                                    <li><a href="9networkmodel.html" > <i class="fass fa-qrcode"> </i>Computer Network Models</li>
+                                                        <li><a href="10OSIMODEL.html" > <i class="fass fa-qrcode"> </i> OSI Model </li>
+                                                            <li><a href="11tcpipmodel.html" > <i class="fass fa-qrcode"> </i> TCP/IP model </li>
+                                                                <li><a href="12digitaltransmosion.html" > <i class="fass fa-qrcode"> </i> Digital Transmission </li>
+                                                                    <li><a href="13transmision media.html" > <i class="fass fa-qrcode"> </i> Transmission Media </li>
+                                                                        <li><a href="14guided media.html" > <i class="fass fa-qrcode"> </i> Guided Media </li>
+                                                                            <li><a href="15unguided media.html" > <i class="fass fa-qrcode"> </i> Unguided Media </li>
+                                                                                <li><a href="16multiplexing media.html" > <i class="fass fa-qrcode"> </i> Multipleing media </li>
+                                                                                    <li><a href="17switching.html" > <i class="fass fa-qrcode"> </i> Switching  </li>
+                                                                                        <li><a href="18switching modes.html" > <i class="fass fa-qrcode"> </i> Switching modes</li>
+                                                                                            <li><a href="19swiching technics.html" > <i class="fass fa-qrcode"> </i>Switching technics </li>
+                                                                                                <li><a href="20data link layer.html" > <i class="fass fa-qrcode"> </i> Data Link Layer </li>
+                                                                                                    <li><a href="21Errordedection.html" > <i class="fass fa-qrcode"> </i> Error Dedection</li>
+                                                                                                        <li><a href="22Errorcorrection.html" > <i class="fass fa-qrcode"> </i>Error correction</li>
+                                                                                                            <li><a href="23data link control.html" > <i class="fass fa-qrcode"> </i> Data link control </li>
+                                                                                                                <li><a href="24networklayer.html" > <i class="fass fa-qrcode"> </i>Network Layer</li>
+                                                                                                                    <li><a href="25network addressing.html" > <i class="fass fa-qrcode"> </i>Network Addressing</li>
+                                                                                                                        <li><a href="26routing.html" > <i class="fass fa-qrcode"> </i>Routing</li>
+                                                                                                                            <li><a href="27networklayerprotocol.html" > <i class="fass fa-qrcode"> </i>Network Layer Protocol</li>
+                                                                                                                                <li><a href="28routingalgorithum.html" > <i class="fass fa-qrcode"> </i>Routing algorithum</li>
+            
+                                                                                                                                    <li><a href="29distancevactor.html" > <i class="fass fa-qrcode"> </i> Distance vactor</li>
+                                                                                                                                        <li><a href="30link state routong.html" > <i class="fass fa-qrcode"> </i>Link State routing</li>
+            
+                                                                                                                                            <li><a href="31transportlayer.html" > <i class="fass fa-qrcode"> </i>Transport Layer</li>
+            
+                                                                                                                                                <li><a href="32transport layer protocol.html" > <i class="fass fa-qrcode"> </i> Transport Layer protocol </li>
+                                                                                                                                                    <li><a href="33applicationlayer.html" > <i class="fass fa-qrcode"> </i> Application</li>
+                                                                                                                                                        <li><a href="34dns.html" > <i class="fass fa-qrcode"> </i>DNS</li>
+                                                                                                                                                            <li><a href="35Ftp.html" > <i class="fass fa-qrcode"> </i> FTP</li>
+                                                                                                                                                                <li><a href="36SMTP.html" > <i class="fass fa-qrcode"> </i>SMTP</li>
+                                                                                                                                                                    <li><a href="37snmp.html" > <i class="fass fa-qrcode"> </i> snmp </li>
+                                                                                                                                                                        <li><a href="38http.html" > <i class="fass fa-qrcode"> </i>HTTP</li>                                                                                                                                          <li><a href="#" > <i class="fass fa-qrcode"> </i> Introduction </li>
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+               <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+        </div>
+    </body>
+
+</html>

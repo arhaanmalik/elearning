@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">C structs and Pointers</h1>
+<ul class="points">
+   
+    In this tutorial, you'll learn to use pointers to access members of structs in C programming. You will also learn to dynamically allocate memory of struct types.
+    <br><br>
+    
+    Before you learn about how pointers can be used with structs, be sure to check these tutorials:
+    <br><br>
+    C Pointers<br>
+    C struct<br>
+    C Pointers to struct<br>
+    Here's how you can create pointers to structs.<br>
+    <br>
+    struct name {<br>
+        member1;<br>
+        member2;<br>
+        .<br>
+        .<br>
+    };<br><br>
+    
+    int main()<br>
+    {<br>
+        struct name *ptr, Harry;<br>
+    }<br>
+    Here, ptr is a pointer to struct.<br>
+    <br><br>
+    Example: Access members using Pointer<br>
+    To access members of a structure using pointers, we use the -> operator.<br><br>
+    
+    #include < stdio.h><br>
+    struct person<br>
+    {<br>
+       int age;<br>
+       float weight;<br>
+    };<br><br>
+    
+    int main()<br>
+    {<br>
+        struct person *personPtr, person1;<br>
+        personPtr = &person1;   <br>
+    
+        printf("Enter age: ");<br>
+        scanf("%d", &personPtr->age);<br>
+        <br>
+        printf("Enter weight: ");<br>
+        scanf("%f", &personPtr->weight);<br><br>
+    
+        printf("Displaying:\n");<br>
+        printf("Age: %d\n", personPtr->age);<br>
+        printf("weight: %f", personPtr->weight);<br><br>
+    
+        return 0;<br>
+    }<br>
+    In this example, the address of person1 is stored in the personPtr pointer using personPtr = &person1;.
+    <br><br>
+    Now, you can access the members of person1 using the personPtr pointer.
+    <br><br>
+    
+    By the way,<br><br>
+    
+    personPtr->age is equivalent to (*personPtr).age<br>
+    personPtr->weight is equivalent to (*personPtr).weight<br>
+    Dynamic memory allocation of structs<br>
+    Before you proceed this section, we recommend you to check C dynamic memory allocation.<br><br><br>
+    
+    Sometimes, the number of struct variables you declared may be insufficient. You may need to allocate memory during run-time. Here's how you can achieve this in C programming.
+    <br><br>
+    Example: Dynamic memory allocation of structs<br>
+    #include <stdio.h><br>
+    #include <stdlib.h><br>
+    struct person {<br>
+       int age;<br>
+       float weight;<br>
+       char name[30];<br>
+    };<br><br>
+    
+    int main()<br>
+    {<br>
+       struct person *ptr;<br>
+       int i, n;<br><br>
+    
+       printf("Enter the number of persons: ");<br>
+       scanf("%d", &n);<br><br>
+    
+       // allocating memory for n numbers of struct person<br>
+       ptr = (struct person*) malloc(n * sizeof(struct person));<br><br>
+    
+       for(i = 0; i < n; ++i)<br>
+       {<br>
+           printf("Enter first name and age respectively: ");
+           <br><br>
+           // To access members of 1st struct person,<br>
+           // ptr->name and ptr->age is used<br><br>
+    
+           // To access members of 2nd struct person,<br>
+           // (ptr+1)->name and (ptr+1)->age is used<br>
+           scanf("%s %d", (ptr+i)->name, &(ptr+i)->age);<br>
+       }<br><br>
+    
+       printf("Displaying Information:\n");<br>
+       for(i = 0; i < n; ++i)<br>
+           printf("Name: %s\tAge: %d\n", (ptr+i)->name, (ptr+i)->age);
+           <br><br>
+       return 0;<br>
+    }<br>
+    When you run the program, the output will be:<br>
+    
+    Enter the number of persons:  2<br>
+    Enter first name and age respectively:  Harry 24<br>
+    Enter first name and age respectively:  Gary 32<br>
+    Displaying Information:<br>
+    Name: Harry	Age: 24<br>
+    Name: Gary	Age: 32<br>
+    In the above example, n number of struct variables are created where n is entered by the user.
+    <br><br>
+    To allocate the memory for n number of struct person, we used,
+    <br><br>
+    ptr = (struct person*) malloc(n * sizeof(struct person));<br>
+    Then, we used the ptr pointer to access elements of person.<br>
+
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+               <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+    
+        </div>
+    </body>
+
+</html>

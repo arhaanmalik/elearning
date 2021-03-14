@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/1computernework.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">topology</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">What is Topology?</h1>
+<p>Topology defines the structure of the network of how all the components are interconnected to each other. There are two types of topology: physical and logical topology.</p>
+<p>Physical topology is the geometric representation of all the nodes in a network.</p>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/computer-network-topologies.png" alt="Computer Network Topologies"/>
+<hr/>
+
+<h2 class="h2">Bus Topology</h2>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/computer-network-topologies-bus-topology.png" alt="Computer Network Topologies"/>
+<ul class="points">
+<li>The bus topology is designed in such a way that all the stations are connected through a single cable known as a backbone cable.</li>
+<li>Each node is either connected to the backbone cable by drop cable or directly connected to the backbone cable.</li>
+<li>When a node wants to send a message over the network, it puts a message over the network. All the stations available in the network will receive the message whether it has been addressed or not.</li>
+<li>The bus topology is mainly used in 802.3 (ethernet) and 802.4 standard networks.</li>
+<li>The configuration of a bus topology is quite simpler as compared to other topologies.</li>
+<li>The backbone cable is considered as a <strong>"single lane"</strong> through which the message is broadcast to all the stations.</li>
+<li>The most common access method of the bus topologies is <strong>CSMA</strong> (Carrier Sense Multiple Access).</li>
+</ul>
+<p><strong>CSMA:</strong> It is a media access control used to control the data flow so that data integrity is maintained, i.e., the packets do not get lost. There are two alternative ways of handling the problems that occur when two nodes send the messages simultaneously.</p>
+<ul class="points">
+<li><strong>CSMA CD:</strong> CSMA CD (<strong>Collision detection</strong>) is an access method used to detect the collision. Once the collision is detected, the sender will stop transmitting the data. Therefore, it works on "<strong>recovery after the collision</strong>".</li>
+<li><strong>CSMA CA:</strong> <strong>CSMA CA (Collision Avoidance)</strong> is an access method used to avoid the collision by checking whether the transmission media is busy or not. If busy, then the sender waits until the media becomes idle. This technique effectively reduces the possibility of the collision. It does not work on "recovery after the collision".</li>
+</ul>
+<h3 class="h4">Advantages of Bus topology:</h3>
+<ul class="points">
+<li><strong>Low-cost cable:</strong> In bus topology, nodes are directly connected to the cable without passing through a hub. Therefore, the initial cost of installation is low.</li>
+<li><strong>Moderate data speeds:</strong> Coaxial or twisted pair cables are mainly used in bus-based networks that support upto 10 Mbps.</li>
+<li><strong>Familiar technology:</strong> Bus topology is a familiar technology as the installation and troubleshooting techniques are well known, and hardware components are easily available.</li>
+<li><strong>Limited failure:</strong> A failure in one node will not have any effect on other nodes.</li>
+</ul>
+<h3 class="h4">Disadvantages of Bus topology:</h3>
+<ul class="points">
+<li><strong>Extensive cabling:</strong> A bus topology is quite simpler, but still it requires a lot of cabling.</li>
+<li><strong>Difficult troubleshooting:</strong> It requires specialized test equipment to determine the cable faults. If any fault occurs in the cable, then it would disrupt the communication for all the nodes.</li>
+<li><strong>Signal interference:</strong> If two nodes send the messages simultaneously, then the signals of both the nodes collide with each other.</li>
+<li><strong>Reconfiguration difficult:</strong> Adding new devices to the network would slow down the network.</li>
+<li><strong>Attenuation:</strong> Attenuation is a loss of signal leads to communication issues. Repeaters are used to regenerate the signal.</li>
+</ul>
+<hr/>
+<h2 class="h2">Ring Topology</h2>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/computer-network-topologies-ring-topology.png" alt="Computer Network Topologies"/>
+<ul class="points">
+<li>Ring topology is like a bus topology, but with connected ends.</li>
+<li>The node that receives the message from the previous computer will retransmit to the next node.</li>
+<li>The data flows in one direction, i.e., it is unidirectional.</li>
+<li>The data flows in a single loop continuously known as an endless loop.</li>
+<li>It has no terminated ends, i.e., each node is connected to other node and having no termination point.</li>
+<li>The data in a ring topology flow in a clockwise direction.</li>
+<li>The most common access method of the ring topology is <strong>token passing</strong>.
+<ul class="points">
+<li><strong>Token passing:</strong> It is a network access method in which token is passed from one node to another node.</li>
+<li><strong>Token:</strong> It is a frame that circulates around the network.</li>
+</ul>
+</li>
+</ul>
+<h3 class="h3">Working of Token passing</h3>
+<ul class="points">
+<li>A token moves around the network, and it is passed from computer to computer until it reaches the destination.</li>
+<li>The sender modifies the token by putting the address along with the data.</li>
+<li>The data is passed from one device to another device until the destination address matches. Once the token received by the destination device, then it sends the acknowledgment to the sender.</li>
+<li>In a ring topology, a token is used as a carrier.</li>
+</ul>
+<h3 class="h4">Advantages of Ring topology:</h3>
+<ul class="points">
+<li><strong>Network Management:</strong> Faulty devices can be removed from the network without bringing the network down.</li>
+<li><strong>Product availability:</strong> Many hardware and software tools for network operation and monitoring are available.</li>
+<li><strong>Cost:</strong> Twisted pair cabling is inexpensive and easily available. Therefore, the installation cost is very low. </li>
+<li><strong>Reliable:</strong> It is a more reliable network because the communication system is not dependent on the single host computer.</li>
+</ul>
+<h3 class="h4">Disadvantages of Ring topology:</h3>
+<ul class="points">
+<li><strong>Difficult troubleshooting:</strong> It requires specialized test equipment to determine the cable faults. If any fault occurs in the cable, then it would disrupt the communication for all the nodes.</li>
+<li><strong>Failure:</strong> The breakdown in one station leads to the failure of the overall network.</li>
+<li><strong>Reconfiguration difficult:</strong> Adding new devices to the network would slow down the network.</li>
+<li><strong>Delay:</strong> Communication delay is directly proportional to the number of nodes. Adding new devices increases the communication delay.</li>
+</ul>
+<hr/>
+
+<h2 class="h2">Star Topology</h2>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/computer-network-topologies-star-topology.png" alt="Computer Network Topologies"/>
+<ul class="points">
+<li>Star topology is an arrangement of the network in which every node is connected to the central hub, switch or a central computer.</li>
+<li>The central computer is known as a <strong>server</strong>, and the peripheral devices attached to the server are known as <strong>clients</strong>.</li>
+<li>Coaxial cable or RJ-45 cables are used to connect the computers.</li>
+<li>Hubs or Switches are mainly used as connection devices in a <strong>physical star topology</strong>.</li>
+<li>Star topology is the most popular topology in network implementation.</li>
+</ul>
+<h3 class="h4">Advantages of Star topology</h3>
+<ul class="points">
+<li><strong>Efficient troubleshooting:</strong> Troubleshooting is quite efficient in a star topology as compared to bus topology. In a bus topology, the manager has to inspect the kilometers of cable. In a star topology, all the stations are connected to the centralized network. Therefore, the network administrator has to go to the single station to troubleshoot the problem. </li>
+<li><strong>Network control:</strong> Complex network control features can be easily implemented in the star topology. Any changes made in the star topology are automatically accommodated. </li>
+<li><strong>Limited failure:</strong> As each station is connected to the central hub with its own cable, therefore failure in one cable will not affect the entire network. </li>
+<li><strong>Familiar technology:</strong> Star topology is a familiar technology as its tools are cost-effective. </li>
+<li><strong>Easily expandable:</strong> It is easily expandable as new stations can be added to the open ports on the hub. </li>
+<li><strong>Cost effective:</strong> Star topology networks are cost-effective as it uses inexpensive coaxial cable. </li>
+<li><strong>High data speeds:</strong> It supports a bandwidth of approx 100Mbps. Ethernet 100BaseT is one of the most popular Star topology networks. </li>
+</ul>
+<h3 class="h4">Disadvantages of Star topology</h3>
+<ul class="points">
+<li><strong>A Central point of failure:</strong> If the central hub or switch goes down, then all the connected nodes will not be able to communicate with each other.</li>
+<li><strong>Cable:</strong> Sometimes cable routing becomes difficult when a significant amount of routing is required.</li>
+</ul>
+<hr/>
+
+<h2 class="h2">Tree topology</h2>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/computer-network-topologies-tree-topology.png" alt="Computer Network Topologies"/>
+<ul class="points">
+<li>Tree topology combines the characteristics of bus topology and star topology.</li>
+<li>A tree topology is a type of structure in which all the computers are connected with each other in hierarchical fashion.</li>
+<li>The top-most node in tree topology is known as a root node, and all other nodes are the descendants of the root node.</li>
+<li>There is only one path exists between two nodes for the data transmission. Thus, it forms a parent-child hierarchy.</li>
+</ul>
+<h3 class="h4">Advantages of Tree topology</h3>
+<ul class="points">
+<li><strong>Support for broadband transmission:</strong> Tree topology is mainly used to provide broadband transmission, i.e., signals are sent over long distances without being attenuated.</li>
+<li><strong>Easily expandable:</strong> We can add the new device to the existing network. Therefore, we can say that tree topology is easily expandable.</li>
+<li><strong>Easily manageable:</strong> In tree topology, the whole network is divided into segments known as star networks which can be easily managed and maintained.</li>
+<li><strong>Error detection:</strong> Error detection and error correction are very easy in a tree topology.</li>
+<li><strong>Limited failure:</strong> The breakdown in one station does not affect the entire network.</li>
+<li><strong>Point-to-point wiring:</strong> It has point-to-point wiring for individual segments.</li>
+</ul>
+<h3 class="h4">Disadvantages of Tree topology</h3>
+<ul class="points">
+<li><strong>Difficult troubleshooting:</strong> If any fault occurs in the node, then it becomes difficult to troubleshoot the problem.</li>
+<li><strong>High cost:</strong> Devices required for broadband transmission are very costly.</li>
+<li><strong>Failure:</strong> A tree topology mainly relies on main bus cable and failure in main bus cable will damage the overall network.</li>
+<li><strong>Reconfiguration difficult:</strong> If new devices are added, then it becomes difficult to reconfigure.</li>
+</ul>
+<hr/>
+
+<h2 class="h2">Mesh topology</h2>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/computer-network-topologies-mesh-topology.png" alt="Computer Network Topologies"/>
+<ul class="points">
+<li>Mesh technology is an arrangement of the network in which computers are interconnected with each other through various redundant connections.</li>
+<li>There are multiple paths from one computer to another computer.</li>
+<li>It does not contain the switch, hub or any central computer which acts as a central point of communication.</li>
+<li>The Internet is an example of the mesh topology.</li>
+<li>Mesh topology is mainly used for WAN implementations where communication failures are a critical concern.</li>
+<li>Mesh topology is mainly used for wireless networks.</li>
+<li>Mesh topology can be formed by using the formula:<br>
+<strong>Number of cables = (n*(n-1))/2;</strong>
+</li>
+</ul>
+<p class="pq">Where n is the number of nodes that represents the network.</p>
+<p><strong>Mesh topology is divided into two categories:</strong></p>
+<ul class="points">
+<li>Fully connected mesh topology</li>
+<li>Partially connected mesh topology</li>
+</ul>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/computer-network-topologies-two-categories.png" alt="Computer Network Topologies"/>
+<ul class="points">
+<li><strong>Full Mesh Topology:</strong> In a full mesh topology, each computer is connected to all the computers available in the network.</li>
+<li><strong>Partial Mesh Topology:</strong> In a partial mesh topology, not all but certain computers are connected to those computers with which they communicate frequently.</li>
+</ul>
+<h3 class="h4">Advantages of Mesh topology:</h3>
+<p><strong>Reliable:</strong> The mesh topology networks are very reliable as if any link breakdown will not affect the communication between connected computers.</p>
+<p><strong>Fast Communication:</strong> Communication is very fast between the nodes.</p>
+<p><strong>Easier Reconfiguration:</strong> Adding new devices would not disrupt the communication between other devices.</p>
+<h3 class="h4">Disadvantages of Mesh topology</h3>
+<ul class="points">
+<li><strong>Cost:</strong> A mesh topology contains a large number of connected devices such as a router and more transmission media than other topologies.</li>
+<li><strong>Management:</strong> Mesh topology networks are very large and very difficult to maintain and manage. If the network is not monitored carefully, then the communication link failure goes undetected.</li>
+<li><strong>Efficiency:</strong> In this topology, redundant connections are high that reduces the efficiency of the network.</li>
+</ul>
+<hr/>
+
+<h2 class="h2">Hybrid Topology</h2>
+<img src="https://static.javatpoint.com/tutorial/computer-network/images/computer-network-topologies-hybrid-topology.png" alt="Computer Network Topologies"/>
+<ul class="points">
+<li>The combination of various different topologies is known as <strong>Hybrid topology</strong>.</li>
+<li>A Hybrid topology is a connection between different links and nodes to transfer the data.</li>
+<li>When two or more different topologies are combined together is termed as Hybrid topology and if similar topologies are connected with each other will not result in Hybrid topology. For example, if there exist a ring topology in one branch of ICICI bank and bus topology in another branch of ICICI bank, connecting these two topologies will result in Hybrid topology.</li>
+</ul>
+<h3 class="h4">Advantages of Hybrid Topology</h3>
+<ul class="points">
+<li><strong>Reliable:</strong> If a fault occurs in any part of the network will not affect the functioning of the rest of the network.</li>
+<li><strong>Scalable:</strong> Size of the network can be easily expanded by adding new devices without affecting the functionality of the existing network.</li>
+<li><strong>Flexible:</strong> This topology is very flexible as it can be designed according to the requirements of the organization.</li>
+<li><strong>Effective:</strong> Hybrid topology is very effective as it can be designed in such a way that the strength of the network is maximized and weakness of the network is minimized.</li>
+</ul>
+<h3 class="h4">Disadvantages of Hybrid topology</h3>
+<ul class="points">
+<li><strong>Complex design:</strong> The major drawback of the Hybrid topology is the design of the Hybrid network. It is very difficult to design the architecture of the Hybrid network.</li>
+<li><strong>Costly Hub:</strong> The Hubs used in the Hybrid topology are very expensive as these hubs are different from usual Hubs used in other topologies.</li>
+<li><strong>Costly infrastructure:</strong> The infrastructure cost is very high as a hybrid network requires a lot of cabling, network devices, etc.</li>
+</ul>
+<hr/>
+
+
+
+
+
+
+                    
+                    <div class="botton">
+                    <a href="./6networkType.html" class="previous">&laquo; Previous</a>
+                    <a href="./8transmisionmode.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2> NETWORKING </h2>
+                <ul>
+                    <li><a href="1ComputerNetwork.html" > <i class="fa fa-qrcode"> </i> Computer Network </li>
+                        <li><a href="2introduction.html" > <i class="fa fa-qrcode"> </i> Introduction </li>
+                            <li><a href="3feature.html" > <i class="fa fa-qrcode"> </i> Features Of Computer network</li>
+                                <li><a href="4Architecture.html" > <i class="fa fa-qrcode"> </i> Computer Network Architecture </li>
+                                    <li><a href="5component.html" > <i class="fa fa-qrcode"> </i> Computer Network Components </li>
+                                        <li><a href="6networkType.html" > <i class="fa fa-qrcode"> </i> Computer Network Types</li>
+                                            <li><a href="7topology.html" > <i class="fass fa-qrcode"> </i> What is Topology?</li>
+                                                <li><a href="8transmisionmode.html" > <i class="fass fa-qrcode"> </i> Transmission modes</li>
+                                                    <li><a href="9networkmodel.html" > <i class="fass fa-qrcode"> </i>Computer Network Models</li>
+                                                        <li><a href="10OSIMODEL.html" > <i class="fass fa-qrcode"> </i> OSI Model </li>
+                                                            <li><a href="11tcpipmodel.html" > <i class="fass fa-qrcode"> </i> TCP/IP model </li>
+                                                                <li><a href="12digitaltransmosion.html" > <i class="fass fa-qrcode"> </i> Digital Transmission </li>
+                                                                    <li><a href="13transmision media.html" > <i class="fass fa-qrcode"> </i> Transmission Media </li>
+                                                                        <li><a href="14guided media.html" > <i class="fass fa-qrcode"> </i> Guided Media </li>
+                                                                            <li><a href="15unguided media.html" > <i class="fass fa-qrcode"> </i> Unguided Media </li>
+                                                                                <li><a href="16multiplexing media.html" > <i class="fass fa-qrcode"> </i> Multipleing media </li>
+                                                                                    <li><a href="17switching.html" > <i class="fass fa-qrcode"> </i> Switching  </li>
+                                                                                        <li><a href="18switching modes.html" > <i class="fass fa-qrcode"> </i> Switching modes</li>
+                                                                                            <li><a href="19swiching technics.html" > <i class="fass fa-qrcode"> </i>Switching technics </li>
+                                                                                                <li><a href="20data link layer.html" > <i class="fass fa-qrcode"> </i> Data Link Layer </li>
+                                                                                                    <li><a href="21Errordedection.html" > <i class="fass fa-qrcode"> </i> Error Dedection</li>
+                                                                                                        <li><a href="22Errorcorrection.html" > <i class="fass fa-qrcode"> </i>Error correction</li>
+                                                                                                            <li><a href="23data link control.html" > <i class="fass fa-qrcode"> </i> Data link control </li>
+                                                                                                                <li><a href="24networklayer.html" > <i class="fass fa-qrcode"> </i>Network Layer</li>
+                                                                                                                    <li><a href="25network addressing.html" > <i class="fass fa-qrcode"> </i>Network Addressing</li>
+                                                                                                                        <li><a href="26routing.html" > <i class="fass fa-qrcode"> </i>Routing</li>
+                                                                                                                            <li><a href="27networklayerprotocol.html" > <i class="fass fa-qrcode"> </i>Network Layer Protocol</li>
+                                                                                                                                <li><a href="28routingalgorithum.html" > <i class="fass fa-qrcode"> </i>Routing algorithum</li>
+            
+                                                                                                                                    <li><a href="29distancevactor.html" > <i class="fass fa-qrcode"> </i> Distance vactor</li>
+                                                                                                                                        <li><a href="30link state routong.html" > <i class="fass fa-qrcode"> </i>Link State routing</li>
+            
+                                                                                                                                            <li><a href="31transportlayer.html" > <i class="fass fa-qrcode"> </i>Transport Layer</li>
+            
+                                                                                                                                                <li><a href="32transport layer protocol.html" > <i class="fass fa-qrcode"> </i> Transport Layer protocol </li>
+                                                                                                                                                    <li><a href="33applicationlayer.html" > <i class="fass fa-qrcode"> </i> Application</li>
+                                                                                                                                                        <li><a href="34dns.html" > <i class="fass fa-qrcode"> </i>DNS</li>
+                                                                                                                                                            <li><a href="35Ftp.html" > <i class="fass fa-qrcode"> </i> FTP</li>
+                                                                                                                                                                <li><a href="36SMTP.html" > <i class="fass fa-qrcode"> </i>SMTP</li>
+                                                                                                                                                                    <li><a href="37snmp.html" > <i class="fass fa-qrcode"> </i> snmp </li>
+                                                                                                                                                                        <li><a href="38http.html" > <i class="fass fa-qrcode"> </i>HTTP</li>                                                                                                                                               <li><a href="#" > <i class="fass fa-qrcode"> </i> Introduction </li>
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+               <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+        </div>
+    </body>
+
+</html>

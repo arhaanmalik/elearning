@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Java Home </title>
+    <link rel="stylesheet" type="text/css" href="./css/1computernework.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+              <ul>
+                <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                </ul>
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">JAVA PROGRAMMING</a></h2>
+                    <span></span>
+                    </header>
+                  
+                    <h2>Java Type Casting</h2>
+                    <p>Type casting is when you assign a value of one primitive data type to another type.</p>
+                    <p>In Java, there are two types of casting:</p>
+                    <ul>
+                    <li><strong>Widening Casting</strong> (automatically) - converting a smaller type 
+                    to a larger type size<br>
+                      <code class="w3-codespan">byte</code> -&gt; <code class="w3-codespan">short</code> -&gt; <code class="w3-codespan">char</code> -&gt; <code class="w3-codespan">int</code> -&gt; <code class="w3-codespan">long</code> -&gt; <code class="w3-codespan">float</code> -&gt; <code class="w3-codespan">double</code><br><br>
+                    <li><strong>Narrowing Casting</strong> (manually) - converting a larger type 
+                    to a smaller size type<br>
+                      <code class="w3-codespan">double</code> -&gt; <code class="w3-codespan">float</code> -&gt; <code class="w3-codespan">long</code> -&gt; <code class="w3-codespan">int</code> -&gt; <code class="w3-codespan">char</code> -&gt; <code class="w3-codespan">short</code> -&gt; <code class="w3-codespan">byte</code>
+                    </ul>
+                    <hr>
+                    
+                    <h2>Widening Casting</h2>
+                    <p>Widening casting is done automatically when passing a smaller size type to a 
+                    larger size type:</p>
+                    <div class="w3-example">
+                    <h3>Example</h3>
+                    <pre class="language-java w3-white"><code>public class Main {
+                    &nbsp; public static void main(String[] args) {
+                    &nbsp;&nbsp;&nbsp; int myInt = 9;
+                    &nbsp;&nbsp;&nbsp; double myDouble = myInt; // Automatic casting: int to double
+                    
+                    &nbsp;&nbsp;&nbsp; System.out.println(myInt);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Outputs 9
+                    &nbsp;&nbsp;&nbsp; System.out.println(myDouble);&nbsp;&nbsp; // Outputs 9.0
+                    &nbsp; }
+                    }
+                    </code></pre>
+                    <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_casting_wide">Try it Yourself &raquo;</a>
+                    </p>
+                    </div>
+                    <hr>
+                    
+                    <h2>Narrowing Casting</h2>
+                    <p>Narrowing casting must be done manually by placing the type in parentheses 
+                    in front of the value:</p>
+                    <div class="w3-example">
+                    <h3>Example</h3>
+                    <pre class="language-java w3-white"><code>public class Main {
+                    &nbsp; public static void main(String[] args) {
+                    &nbsp;&nbsp;&nbsp; double myDouble = 9.78;
+                    &nbsp;&nbsp;&nbsp; int myInt = (int) myDouble; // Manual casting: double to int
+                    
+                    &nbsp;&nbsp;&nbsp; System.out.println(myDouble);&nbsp;&nbsp; // Outputs 9.78
+                    &nbsp;&nbsp;&nbsp; System.out.println(myInt);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Outputs 9
+                    &nbsp; }
+                    }
+                    </code></pre>
+                    <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_casting_narrow">Try it Yourself &raquo;</a>
+                    </p>
+                    </div>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+                    
+                    <hr/>
+                    <div class="botton">
+                    <a href="./Java- Data Type.html" class="previous">&laquo; Previous</a>
+                    <a href="./Java- Operators.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2> JAVA PROGRAMMING </h2>
+                <ul>
+                   
+                  <li><a href="#home" data-after="JAVA - Home">Home</a></li>
+                  <li><a href="./JAVA INTRO.html" data-after="javaintro">Java Intro</a>
+                   
+                   
+                <li><a href="./JAVA ENVIROMENT SETUP.html" data-after="enviromentsetup">Java - Enviroment Setup</a><br> </li>
+                <li><a href="./Java - Basic Syntax.html" data-after="basicsyntax">Java - Basic Syntax</a><br></li>
+                  <li><a href="./Java- Comments.html" data-after="comments">Java- Comments</a></li>
+                  <li><a href="./Java- Variable.html" data-after="variable">Java- Variable</a></li>
+                  <li><a href="./Java- Data Type.html" data-after="datatype">Java- Data Type</a></li>
+          
+                  <li><a href="./Java- Type casting.html" data-after="typecasting">Java- Type casting</a></li>
+                  <li><a href="./Java- Operators.html" data-after="operators">Java- Operators</a></li>
+                  <li><a href="./Java- String.html" data-after="string">Java- String</a></li>
+                  <li><a href="./Java- Math.html" data-after="math">Java- Math</a></li>
+                  <li><a href="./Java- Booleans.html" data-after="booleans">Java- Booleans</a></li>
+                  <li><a href="./Java- If....Else.html" data-after="ifelse">Java- If....Else</a></li>
+                  <li><a href="./Java- Switch.html" data-after="switch">Java- Switch</a></li>
+                  <li><a href="./Java- While Loop.html" data-after="while">Java- While Loop</a></li>
+                  <li><a href="./Java- Do While Loop.html" data-after="dowhile">Java- Do While Loop</a></li>
+                  <li><a href="./Java- For Loop.html" data-after="for">Java- For Loop</a></li>
+                  <li><a href="./Java- Break....Continue.html" data-after="break">Java- Break/Continue</a></li>
+                  <li><a href="./Java- Array.html" data-after="array">Java- Array</a></li>     
+                  
+                  <li><a href="#OOP" data-after="array">Java- Object Oriented</a></li>  
+          
+          
+          
+          
+                  <li><a href="./Java - Inheritanc.html" data-after="switch">Java - Inheritanc</a></li>
+                  <li><a href="./Java - Overriding.html" data-after="while">Java - Overriding</a></li>
+                  <li><a href="./Java - Polymorphism.html" data-after="dowhile">Java - Polymorphism</a></li>
+                  <li><a href="./Java - Abstraction.html" data-after="for">Java - Abstraction</a></li>
+                  <li><a href="./Java - Encapsulation.html" data-after="for">Java - Encapsulation</a></li>
+                  <li><a href="./Java - Interfaces.html" data-after="break">Java - Interfaces</a></li>
+                  <li><a href="./Java - Packages.html" data-after="array">Java - Packages</a></li>  </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+                <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+    
+        </div>
+    </body>
+
+</html>

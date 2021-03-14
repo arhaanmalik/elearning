@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Java Home </title>
+    <link rel="stylesheet" type="text/css" href="./css/1computernework.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+              <ul>
+                <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                </ul>
+            
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">JAVA PROGRAMMING</a></h2>
+                    <span></span>
+                    </header>
+                    <p>In this chapter, we will discuss on the different aspects of setting up a congenial environment for Java.</p>
+                    <h3>Local Environment Setup</h3>
+                  
+                    <p>If you are still willing to set up your environment for Java programming language, then this section guides you on how to download and set up Java on your machine. Following are the steps to set up the environment.
+                     <br> Java SE is freely available from the link Download Java. You can download a version based on your operating system.<br>
+                     <br> Follow the instructions to download Java and run the .exe to install Java on your machine. Once you installed Java on your machine, you will need to set environment variables to point to correct installation directories −
+                      </p><br>
+                      <h4>Setting Up the Path for Windows</h4><br>
+                      Assuming you have installed Java in c:\Program Files\java\jdk directory −<br>
+                      <ul>
+                     <li> Right-click on 'My Computer' and select 'Properties'.</li><br>
+                      
+                     <li> Click the 'Environment variables' button under the 'Advanced' tab.</li><br>
+                      
+                     <li> Now, alter the 'Path' variable so that it also contains the path to the Java executable. Example, if the path is currently set to 'C:\WINDOWS\SYSTEM32', then change your path to read 'C:\WINDOWS\SYSTEM32;c:\Program Files\java\jdk\bin'.
+                  </li></ul><br>
+                  <h4> Setting Up the Path for Linux, UNIX, Solaris, FreeBSD</h4>
+                     <p> Environment variable PATH should be set to point to where the Java binaries have been installed. Refer to your shell documentation, if you have trouble doing this.
+                      
+                     <br><br> Example, if you use bash as your shell, then you would add the following line to the end of your '.bashrc: export PATH = /path/to/java:$PATH'
+                  </p>
+                  <h4>Popular Java Editors</h4>
+                      <p>To write your Java programs, you will need a text editor. There are even more sophisticated IDEs available in the market. But for now, you can consider one of the following −
+                      
+                    <br><br> <h5> Notepad −</h5> On Windows machine, you can use any simple text editor like Notepad (Recommended for this tutorial), TextPad.
+                      
+                    <br><br> <h5>Netbeans −</h5> A Java IDE that is open-source and free which can be downloaded from https://www.netbeans.org/index.html.
+                      
+                    <br><br><h5> Eclipse − </h5>A Java IDE developed by the eclipse open-source community and can be downloaded from https://www.eclipse.org/.</p>
+                  
+                  
+                  <h4>Java Quickstart</h4>
+                  <p>In Java, every application begins with a class name, and that class must match the filename.<br>
+                  
+                      Let's create our first Java file, called Main.java, which can be done in any text editor (like Notepad).<br>
+                      
+                      The file should contain a "Hello World" message, which is written with the following code:</p>
+                  
+                      <h5>
+                  
+                          &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; public class Main {<br><br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;  public static void main(String[] args) {<br><br>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;  System.out.println("Hello World");<br><br>
+                                  &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+                                  &nbsp;&nbsp; }
+                  
+                      </h5>
+                  
+                      <p>
+                          Don't worry if you don't understand the code above - we will discuss it in detail in later chapters. For now, focus on how to run the code above.
+                  
+                          <br><br>Save the code in Notepad as "Main.java". Open Command Prompt (cmd.exe), navigate to the directory where you saved your file, and type "javac Main.java":
+                         <br><br><br> This will compile your code. If there are no errors in the code, the command prompt will take you to the next line. Now, type "java Main" to run the file:
+                      <br>
+                      The output should read:</p>
+                    
+                    <hr/>
+                    <div class="botton">
+                    <a href="./JAVA INTRO.html" class="previous">&laquo; Previous</a>
+                    <a href="./Java - Basic Syntax.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2> JAVA PROGRAMMING </h2>
+                <ul>
+                   
+                  <li><a href="#home" data-after="JAVA - Home">Home</a></li>
+                  <li><a href="./JAVA INTRO.html" data-after="javaintro">Java Intro</a>
+                   
+                   
+                <li><a href="./JAVA ENVIROMENT SETUP.html" data-after="enviromentsetup">Java - Enviroment Setup</a><br> </li>
+                <li><a href="./Java - Basic Syntax.html" data-after="basicsyntax">Java - Basic Syntax</a><br></li>
+                  <li><a href="./Java- Comments.html" data-after="comments">Java- Comments</a></li>
+                  <li><a href="./Java- Variable.html" data-after="variable">Java- Variable</a></li>
+                  <li><a href="./Java- Data Type.html" data-after="datatype">Java- Data Type</a></li>
+          
+                  <li><a href="./Java- Type casting.html" data-after="typecasting">Java- Type casting</a></li>
+                  <li><a href="./Java- Operators.html" data-after="operators">Java- Operators</a></li>
+                  <li><a href="./Java- String.html" data-after="string">Java- String</a></li>
+                  <li><a href="./Java- Math.html" data-after="math">Java- Math</a></li>
+                  <li><a href="./Java- Booleans.html" data-after="booleans">Java- Booleans</a></li>
+                  <li><a href="./Java- If....Else.html" data-after="ifelse">Java- If....Else</a></li>
+                  <li><a href="./Java- Switch.html" data-after="switch">Java- Switch</a></li>
+                  <li><a href="./Java- While Loop.html" data-after="while">Java- While Loop</a></li>
+                  <li><a href="./Java- Do While Loop.html" data-after="dowhile">Java- Do While Loop</a></li>
+                  <li><a href="./Java- For Loop.html" data-after="for">Java- For Loop</a></li>
+                  <li><a href="./Java- Break....Continue.html" data-after="break">Java- Break/Continue</a></li>
+                  <li><a href="./Java- Array.html" data-after="array">Java- Array</a></li>     
+                  
+                  <li><a href="#OOP" data-after="array">Java- Object Oriented</a></li>  
+          
+          
+          
+          
+                  <li><a href="./Java - Inheritanc.html" data-after="switch">Java - Inheritanc</a></li>
+                  <li><a href="./Java - Overriding.html" data-after="while">Java - Overriding</a></li>
+                  <li><a href="./Java - Polymorphism.html" data-after="dowhile">Java - Polymorphism</a></li>
+                  <li><a href="./Java - Abstraction.html" data-after="for">Java - Abstraction</a></li>
+                  <li><a href="./Java - Encapsulation.html" data-after="for">Java - Encapsulation</a></li>
+                  <li><a href="./Java - Interfaces.html" data-after="break">Java - Interfaces</a></li>
+                  <li><a href="./Java - Packages.html" data-after="array">Java - Packages</a></li>                
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+                 <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+        </div>
+    </body>
+
+</html>

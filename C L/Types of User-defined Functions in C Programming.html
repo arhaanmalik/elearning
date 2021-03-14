@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">Type of User-defined Functions in C</h1>
+<ul class="points">
+<li> 
+    There can be 4 different types of user-defined functions, they are:
+    <br><br>
+    Function with no arguments and no return value<br>
+    Function with no arguments and a return value<br>
+    Function with arguments and no return value<br>
+    Function with arguments and a return value<br>
+    Below, we will discuss about all these types, along with program examples.<br><br>
+    
+    Function with no arguments and no return value<br>
+    Such functions can either be used to display information or they are completely dependent on user inputs.<br><br>
+    
+    Below is an example of a function, which takes 2 numbers as input from user, and display which is the greater number.
+    <br><br>
+    #include<stdio.h><br><br>
+    
+    void greatNum();       // function declaration<br><br>
+    
+    int main()<br>
+    {<br>
+        greatNum();        // function call<br>
+        return 0;<br>
+    }<br><br>
+    
+    void greatNum()        // function definition<br><br>
+    {<br>
+        int i, j;<br>
+        printf("Enter 2 numbers that you want to compare...");<br>
+        scanf("%d%d", &i, &j);<br>
+        if(i > j) {<br>
+            printf("The greater number is: %d", i);<br>
+        }<br>
+        else {<br>
+            printf("The greater number is: %d", j);<br>
+        }<br>
+    }<br>
+    Function with no arguments and a return value<br>
+    We have modified the above example to make the function greatNum() return the number which is greater amongst the 2 input numbers.
+    <br><br>
+    #include<stdio.h><br><br>
+    
+    int greatNum();       // function declaration<br><br>
+    
+    int main()<br>
+    {<br>
+        int result;<br>
+        result = greatNum();        // function call<br>
+        printf("The greater number is: %d", result);<br>
+        return 0;<br><br>
+    }<br><br>
+    
+    int greatNum()        // function definition<br>
+    {<br>
+        int i, j, greaterNum;<br>
+        printf("Enter 2 numbers that you want to compare...");<br>
+        scanf("%d%d", &i, &j);<br>
+        if(i > j) {<br>
+            greaterNum = i;<br>
+        }<br>
+        else {<br>
+            greaterNum = j;<br>
+        }<br>
+        // returning the result<br>
+        return greaterNum;<br>
+    }<br>
+    Function with arguments and no return value<br>
+    We are using the same function as example again and again, to demonstrate that to solve a problem there can be many different ways.
+    <br><br>
+    This time, we have modified the above example to make the function greatNum() take two int values as arguments, but it will not be returning anything.
+    <br><br>
+    #include< stdio.h><br><br>
+    
+    void greatNum(int a, int b);       // function declaration<br><br>
+    
+    int main()<br>
+    {<br>
+        int i, j;<br>
+        printf("Enter 2 numbers that you want to compare...");<br>
+        scanf("%d%d", &i, &j);<br>
+        greatNum(i, j);        // function call<br>
+        return 0;<br>
+    }<br>
+    <br>
+    void greatNum(int x, int y)        // function definition<br>
+    {<br>
+        if(x > y) {<br>
+            printf("The greater number is: %d", x);<br>
+        }<br>
+        else {<br>
+            printf("The greater number is: %d", y);<br>
+        }<br>
+    }<br><br>
+    
+    VDO.AI<br><br>
+    
+    Function with arguments and a return value<br>
+    This is the best type, as this makes the function completely independent of inputs and outputs, and only the logic is defined inside the function body.
+    <br><br>
+    #include<stdio.h><br><br>
+    
+    int greatNum(int a, int b);       // function declaration<br><br>
+    
+    int main()<br>
+    {<br>
+        int i, j, result;<br>
+        printf("Enter 2 numbers that you want to compare...");<br>
+        scanf("%d%d", &i, &j);<br>
+        result = greatNum(i, j); // function call<br>
+        printf("The greater number is: %d", result);<br>
+        return 0;<br>
+    }<br>
+    
+    int greatNum(int x, int y)        // function definition<br>
+    {<br>
+        if(x > y) {<br>
+            return x;<br>
+        }<br>
+        else {<br>
+            return y;<br>
+        }<br>
+    }<br>
+    Nesting of Functions<br>
+    C language also allows nesting of functions i.e to use/call one function inside another function's body. We must be careful while using nested functions, because it may lead to infinite nesting.
+    <br><br>
+    
+    function1()<br>
+    {<br>
+        // function1 body here<br><br>
+        
+        function2();
+        <br><br>
+        // function1 body here<br>
+    }<br>
+    If function2() also has a call for function1() inside it, then in that case, it will lead to an infinite nesting. They will keep calling each other and the program will never terminate.
+    <br>
+    Not able to understand? Lets consider that inside the main() function, function1() is called and its execution starts, then inside function1(), we have a call for function2(), so the control of program will go to the function2(). But as function2() also has a call to function1() in its body, it will call function1(), which will again call function2(), and this will go on for infinite times, until you forcefully exit from program execution.
+    <br>
+    What is Recursion?<br>
+    Recursion is a special way of nesting functions, where a function calls itself inside it. We must have certain conditions in the function to break out of the recursion, otherwise recursion will occur infinite times.
+    <br><br>
+    function1()<br>
+    {   <br>
+        // function1 body<br>
+        function1();<br>
+        // function1 body<br>
+    }<br><br>
+    
+    Example: Factorial of a number using Recursion<br>
+    #include<stdio.h><br><br>
+    
+    int factorial(int x);       //declaring the function<br><br>
+    
+    void main()<br>
+    {<br>
+        int a, b;<br><br>
+        
+        printf("Enter a number...");<br>
+        scanf("%d", &a);<br>
+        b = factorial(a);       //calling the function named factorial<br>
+        printf("%d", b);<br>
+    }<br><br>
+    
+    int factorial(int x) //defining the function<br><br>
+    {<br>
+        int r = 1;<br>
+        if(x == 1) <br>
+            return 1;<br>
+        else <br>
+            r = x*factorial(x-1);       //recursion, since the function calls itself<br><br>
+        
+        return r;<br>
+    }<br><br>
+    Similarly, there are many more applications of recursion in C language. Go to the programs section, to find out more programs using recursion.
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                <li><a href="#" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="#" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="#" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+               <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+    
+        </div>
+    </body>
+
+</html>

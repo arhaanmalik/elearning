@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#"> C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">Arrays in C</h1>
+<ul class="points">
+
+    In C language, arrays are reffered to as structured data types. An array is defined as finite ordered collection of homogenous data, stored in contiguous memory locations.<br>
+    
+    Here the words,<br><br>
+    
+    finite means data range must be defined.<br>
+    ordered means data must be stored in continuous memory addresses.<br>
+    homogenous means data must be of similar data type.<br><br>
+    
+    Example where arrays are used,<br>
+    to store list of Employee or Student names,<br>
+    to store marks of students,<br>
+    or to store list of numbers or characters etc.<br>
+    Since arrays provide an easy way to represent data, it is classified amongst the data structures in C. Other data structures in c are structure, lists, queues, trees etc. Array can be used to represent not only simple list of data but also table of data in two or three dimensions.<br>
+    
+    <strong>Declaring an Array</strong>
+    Like any other variable, arrays must be declared before they are used. General form of array declaration is,<br>
+    
+    data-type variable-name[size];<br>
+    <br>
+    /* Example of array declaration */<br><br>
+    
+    int arr[10];<br>
+    array declaraction in c<br><br>
+    
+    Here int is the data type, arr is the name of the array and 10 is the size of array. It means array arr can only contain 10 elements of int type.<br>
+    
+    Index of an array starts from 0 to size-1 i.e first element of arr array will be stored at arr[0] address and the last element will occupy arr[9].<br>
+    
+    
+    <strong>Initialization of an Array</strong><br>
+    After an array is declared it must be initialized. Otherwise, it will contain garbage value(any random value). An array can be initialized at either compile time or at runtime.<br>
+    
+    <br>
+    Compile time Array initialization<br>
+    Compile time initialization of array elements is same as ordinary variable initialization. The general form of initialization of array is,
+    <br>
+    data-type array-name[size] = { list of values };<br>
+    
+    /* Here are a few examples */<br>
+    int marks[4]={ 67, 87, 56, 77 };    // integer array initialization<br>
+    <br>
+    float area[5]={ 23.4, 6.8, 5.5 };   // float array initialization<br><br>
+    
+    int marks[4]={ 67, 87, 56, 77, 59 };    // Compile time error<br>
+    One important thing to remember is that when you will give more initializer(array elements) than the declared array size than the compiler will give an error.
+    <br><br>
+    #include< stdio.h> <br>
+    <br>
+    void main()<br>
+    {<br>
+        int i;<br>
+        int arr[] = {2, 3, 4};      // Compile time array initialization<br>
+        for(i = 0 ; i < 3 ; i++) <br>
+        {<br>
+            printf("%d\t",arr[i]);<br>
+        }<br>
+    }<br>
+    
+    2 3 4<br><br>
+    
+    
+    Runtime Array initialization<br>
+    An array can also be initialized at runtime using scanf() function. This approach is usually used for initializing large arrays, or to initialize arrays with user specified values. Example,
+    <br>
+    #include< stdio.h><br>
+    <br>
+    void main()<br>
+    {<br>
+        int arr[4];<br>
+        int i, j;<br>
+        printf("Enter array element");<br>
+        for(i = 0; i < 4; i++)<br>
+        {<br>
+            scanf("%d", &arr[i]);    //Run time array initialization<br>
+        }<br>
+        for(j = 0; j < 4; j++)<br>
+        {<br>
+            printf("%d\n", arr[j]);<br>
+        }<br>
+    }<br>
+    Two dimensional Arrays<br>
+    C language supports multidimensional arrays also. The simplest form of a multidimensional array is the two-dimensional array. Both the row's and column's index begins from 0.<br>
+    <br><br>
+    Two-dimensional arrays are declared as follows,<br>
+    <br>
+    data-type array-name[row-size][column-size] <br>
+    <br>
+    /* Example */<br>
+    int a[3][4];<br>
+    two dimensional array in c<br>
+    <br>
+    An array can also be declared and initialized together. For example,<br>
+    <br>
+    int arr[][3] = {<br>
+        {0,0,0},<br>
+        {1,1,1}<br>
+    };<br>
+    Note: We have not assigned any row value to our array in the above example. It means we can initialize any number of rows. But, we must always specify number of columns, else it will give a compile time error. Here, a 2*3 multi-dimensional matrix is created.
+    <br>
+    
+    Runtime initialization of a two dimensional Array<br>
+    #include< stdio.h><br>
+    <br>
+    void main()<br>
+    {<br>
+        int arr[3][4];<br>
+        int i, j, k;<br>
+        printf("Enter array element");<br>
+        for(i = 0; i < 3;i++)<br>
+        {<br>
+            for(j = 0; j < 4; j++)<br>
+            {<br>
+                scanf("%d", &arr[i][j]);<br>
+            }<br>
+        }<br>
+        for(i = 0; i < 3; i++)<br>
+        {<br>
+            for(j = 0; j < 4; j++)<br>
+            {<br>
+                printf("%d", arr[i][j]);<br>
+            }<br>
+        }<br>
+    }<br>
+
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+              <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+    
+        </div>
+    </body>
+
+</html>

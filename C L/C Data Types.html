@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">C Data Types</h1>
+<ul class="points">
+  In this tutorial, you will learn about basic data types such as int, float, char etc. in C programming.
+  <br>
+  <br>
+  In C programming, data types are declarations for variables. This determines the type and size of data associated with variables. For example,
+  <br>
+  int myVar;<br>
+  Here, myVar is a variable of int (integer) type. The size of int is 4 bytes.<br>
+  <br>
+  Basic types<br>
+  Here's a table containing commonly used types in C programming for quick access.<br>
+  <br>
+  Type	Size (bytes)	Format Specifier<br>
+  int	at least 2, usually 4	%d, %i<br>
+  char	1	%c<br>
+  float	4	%f<br>
+  double	8	%lf<br>
+  short int	2 usually	%hd<br>
+  unsigned int	at least 2, usually 4	%u<br>
+  long int	at least 4, usually 8	%ld, %li<br>
+  long long int	at least 8	%lld, %lli<br>
+  unsigned long int	at least 4	%lu<br>
+  unsigned long long int	at least 8	%llu<br>
+  signed char	1	%c<br>
+  unsigned char	1	%c<br>
+  long double	at least 10, usually 12 or 16	%Lf<br>
+  int<br>
+  Integers are whole numbers that can have both zero, positive and negative values but no decimal values. For example, 0, -5, 10
+  <br><br>
+  We can use int for declaring an integer variable.<br>
+  <br>
+  int id;<br>
+  Here, id is a variable of type integer.<br>
+  <br>
+  You can declare multiple variables at once in C programming. For example,<br>
+  <br>
+  int id, age;<br>
+  The size of int is usually 4 bytes (32 bits). And, it can take 232 distinct states from -2147483648 to 2147483647.
+  <br>
+  float and double<br>
+  float and double are used to hold real numbers.<br>
+  <br>
+  float salary;<br>
+  double price;<br>
+  In C, floating-point numbers can also be represented in exponential. For example,<br>
+  <br>
+  float normalizationFactor = 22.442e2;<br>
+  <br>
+  What's the difference between float and double?<br>
+  <br>
+  The size of float (single precision float data type) is 4 bytes. And the size of double (double precision float data type) is 8 bytes.
+  <br>
+  char<br>
+  Keyword char is used for declaring character type variables. For example,<br>
+  <br>
+  char test = 'h';<br>
+  The size of the character variable is 1 byte.<br>
+  <br>
+  void<br>
+  void is an incomplete type. It means "nothing" or "no type". You can think of void as absent.<br>
+  <br>
+  For example, if a function is not returning anything, its return type should be void.<br>
+  <br>
+  Note that, you cannot create variables of void type.<br>
+  <br>
+  short and long<br>
+  If you need to use a large number, you can use a type specifier long. Here's how:<br>
+  <br>
+  long a;<br>
+  long long b;<br>
+  long double c;<br>
+  Here variables a and b can store integer values. And, c can store a floating-point number.<br>
+  <br>
+  If you are sure, only a small integer ([−32,767, +32,767] range) will be used, you can use short.
+  <br><br>
+  short d;<br>
+  You can always check the size of a variable using the sizeof() operator.<br>
+  <br>
+  #include < stdio.h>      <br>
+  int main() {<br>
+    short a;<br>
+    long b;<br>
+    long long c;<br>
+    long double d;<br>
+    <br>
+    printf("size of short = %d bytes\n", sizeof(a));<br>
+    printf("size of long = %d bytes\n", sizeof(b));<br>
+    printf("size of long long = %d bytes\n", sizeof(c));<br>
+    printf("size of long double= %d bytes\n", sizeof(d));<br>
+    return 0;<br>
+  }<br>
+  signed and unsigned<br>
+  In C, signed and unsigned are type modifiers. You can alter the data storage of a data type by using them. For example,
+  <br><br>
+  unsigned int x;<br>
+  int y;<br>
+  Here, the variable x can hold only zero and positive values because we have used the unsigned modifier.<br>
+  <br>
+  Considering the size of int is 4 bytes, variable y can hold values from -231 to 231-1, whereas variable x can hold values from 0 to 232-1.
+  <br><br>
+  Other data types defined in C programming are:<br>
+  <br>
+  bool Type<br>
+  Enumerated type<br>
+  Complex types<br>
+  Derived Data Types<br>
+  Data types that are derived from fundamental data types are derived types. For example: arrays, pointers, function types, structures, etc.
+  <br><br>
+
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+               <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+        </div>
+    </body>
+
+</html>

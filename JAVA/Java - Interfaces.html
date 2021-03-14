@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Java Home </title>
+    <link rel="stylesheet" type="text/css" href="./css/1computernework.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">JAVA PROGRAMMING</a></h2>
+                    <span></span>
+                    </header>
+                    <p><b>Encapsulation</b> is one of the four fundamental OOP concepts. The other three are inheritance, polymorphism, and abstraction.</p>
+<p>Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class. Therefore, it is also known as <b>data hiding</b>.</p>
+<p>To achieve encapsulation in Java &minus;</p>
+<ul class="list">
+<li><p>Declare the variables of a class as private.</p></li>
+<li><p>Provide public setter and getter methods to modify and view the variables values.</p></li>
+</ul>
+<h3>Example</h3>
+<p>Following is an example that demonstrates how to achieve Encapsulation in Java &minus;</p>
+<pre class="prettyprint notranslate">
+/* File name : EncapTest.java */
+public class EncapTest {
+   private String name;
+   private String idNum;
+   private int age;
+
+   public int getAge() {
+      return age;
+   }
+
+   public String getName() {
+      return name;
+   }
+
+   public String getIdNum() {
+      return idNum;
+   }
+
+   public void setAge( int newAge) {
+      age = newAge;
+   }
+
+   public void setName(String newName) {
+      name = newName;
+   }
+
+   public void setIdNum( String newId) {
+      idNum = newId;
+   }
+}
+</pre>
+<p>The public setXXX() and getXXX() methods are the access points of the instance variables of the EncapTest class. Normally, these methods are referred as getters and setters. Therefore, any class that wants to access the variables should access them through these getters and setters.</p>
+<p>The variables of the EncapTest class can be accessed using the following program &minus;</p>
+<pre class="prettyprint notranslate">
+/* File name : RunEncap.java */
+public class RunEncap {
+
+   public static void main(String args[]) {
+      EncapTest encap = new EncapTest();
+      encap.setName("James");
+      encap.setAge(20);
+      encap.setIdNum("12343ms");
+
+      System.out.print("Name : " + encap.getName() + " Age : " + encap.getAge());
+   }
+}
+</pre>
+<p>This will produce the following result &minus;</p>
+<h3>Output</h3>
+<pre class="result notranslate">
+Name : James Age : 20
+</pre>
+<h2>Benefits of Encapsulation</h2>
+<ul class="list">
+<li><p>The fields of a class can be made read-only or write-only.</p></li>
+<li><p>A class can have total control over what is stored in its fields.</p></li>
+</ul>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+                    
+                    <hr/>
+                    <div class="botton">
+                    <a href="./Java - Encapsulation.html" class="previous">&laquo; Previous</a>
+                    <a href="./Java - Inheritance" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2> JAVA PROGRAMMING </h2>
+                <ul>
+                   
+        <li><a href="#home" data-after="JAVA - Home">Home</a></li>
+        <li><a href="./JAVA INTRO.html" data-after="javaintro">Java Intro</a>
+         
+         
+      <li><a href="./JAVA ENVIROMENT SETUP.html" data-after="enviromentsetup">Java - Enviroment Setup</a><br> </li>
+      <li><a href="./Java - Basic Syntax.html" data-after="basicsyntax">Java - Basic Syntax</a><br></li>
+        <li><a href="./Java- Comments.html" data-after="comments">Java- Comments</a></li>
+        <li><a href="./Java- Variable.html" data-after="variable">Java- Variable</a></li>
+        <li><a href="./Java- Data Type.html" data-after="datatype">Java- Data Type</a></li>
+
+        <li><a href="./Java- Type casting.html" data-after="typecasting">Java- Type casting</a></li>
+        <li><a href="./Java- Operators.html" data-after="operators">Java- Operators</a></li>
+        <li><a href="./Java- String.html" data-after="string">Java- String</a></li>
+        <li><a href="./Java- Math.html" data-after="math">Java- Math</a></li>
+        <li><a href="./Java- Booleans.html" data-after="booleans">Java- Booleans</a></li>
+        <li><a href="./Java- If....Else.html" data-after="ifelse">Java- If....Else</a></li>
+        <li><a href="./Java- Switch.html" data-after="switch">Java- Switch</a></li>
+        <li><a href="./Java- While Loop.html" data-after="while">Java- While Loop</a></li>
+        <li><a href="./Java- Do While Loop.html" data-after="dowhile">Java- Do While Loop</a></li>
+        <li><a href="./Java- For Loop.html" data-after="for">Java- For Loop</a></li>
+        <li><a href="./Java- Break....Continue.html" data-after="break">Java- Break/Continue</a></li>
+        <li><a href="./Java- Array.html" data-after="array">Java- Array</a></li>     
+        
+        <li><a href="#OOP" data-after="array">Java- Object Oriented</a></li>  
+
+
+
+
+        <li><a href="./Java - Inheritanc.html" data-after="switch">Java - Inheritanc</a></li>
+        <li><a href="./Java - Overriding.html" data-after="while">Java - Overriding</a></li>
+        <li><a href="./Java - Polymorphism.html" data-after="dowhile">Java - Polymorphism</a></li>
+        <li><a href="./Java - Abstraction.html" data-after="for">Java - Abstraction</a></li>
+        <li><a href="./Java - Encapsulation.html" data-after="for">Java - Encapsulation</a></li>
+        <li><a href="./Java - Interfaces.html" data-after="break">Java - Interfaces</a></li>
+        <li><a href="./Java - Packages.html" data-after="array">Java - Packages</a></li>
+
+
+       
+
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+                 <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+    
+        </div>
+    </body>
+
+</html>

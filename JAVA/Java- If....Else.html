@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Java Home </title>
+    <link rel="stylesheet" type="text/css" href="./css/1computernework.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+              <ul>
+                <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                    <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                </ul>
+            
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">JAVA PROGRAMMING</a></h2>
+                    <span></span>
+                    </header>
+                    <hr>
+
+                    <h2>Java Conditions and If Statements</h2>
+                    
+                    <p>Java supports the usual logical conditions from mathematics:</p>
+                    <ul>
+                    <li>Less than: <span class="w3-codespan">a &lt; b</span></li>
+                    <li>Less than or equal to: <span class="w3-codespan">a &lt;= b</span></li>
+                    <li>Greater than: <span class="w3-codespan">a &gt; b</span></li>
+                    <li>Greater than or equal to: <span class="w3-codespan">a &gt;= b</span></li>
+                    <li>Equal to <span class="w3-codespan">a == b</span></li>
+                    <li>Not Equal to: <span class="w3-codespan">a != b</span></li>
+                    </ul>
+                    <p>You can use these conditions to perform different actions for different decisions.</p>
+                    <p>Java has the following conditional statements:</p>
+                    <ul>
+                      <li>Use <code class="w3-codespan">if</code> to specify a block of code to be executed, if a specified condition is true</li>
+                      <li>Use <code class="w3-codespan">else</code> to specify a block of code to be executed, if the same condition is false</li>
+                      <li>Use <code class="w3-codespan">else if</code> to specify a new condition to test, if the first condition is false</li>
+                      <li>Use <code class="w3-codespan">switch</code> to specify many alternative blocks of code to be executed</li>
+                    </ul>
+                    
+                    <hr>
+                    
+                    <h2>The if Statement</h2>
+                    
+                    <p>Use the <code class="w3-codespan">if</code> statement to specify a block of Java code to be executed if a condition is <code class="w3-codespan">true</code>.</p>
+                    
+                    <div class="w3-example">
+                    <h3>Syntax</h3>
+                    <pre class="language-java w3-white"><code>if (<em>condition</em>) {
+                    &nbsp; <em>// block of code to be executed if the condition is true</em>
+                    }
+                    </code></pre>
+                    </div>
+                    
+                    <div class="w3-panel w3-note">
+                    <p>Note that <code class="w3-codespan">if</code> is in lowercase letters. Uppercase letters (If or IF) will generate an error.</p>
+                    </div>
+                    <p>In the example below, we test two values to find out if 20 is greater than 
+                    18. If the condition is <code class="w3-codespan">true</code>, print some text:</p>
+                    <div class="w3-example">
+                    <h3>Example</h3>
+                    <pre class="language-java w3-white"><code>if (20 &gt; 18) {
+                    &nbsp; System.out.println(&quot;20 is greater than 18&quot;);
+                    }
+                    </code></pre>
+                    <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_if">Try it Yourself &raquo;</a>
+                    </p>
+                    </div>
+                    
+                    <p>We can also test variables:</p>
+                    <div class="w3-example">
+                    <h3>Example</h3>
+                    <pre class="language-java w3-white"><code>int x = 20;
+                    int y = 18;
+                    if (x &gt; y) {
+                    &nbsp; System.out.println(&quot;x is greater than y&quot;);
+                    }
+                    </code></pre>
+                    <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_if2">Try it Yourself &raquo;</a>
+                    </p>
+                    </div>
+                    <h4>Example explained</h4>
+                    <p>In the example above we use two variables, <strong>x</strong> and <strong>y</strong>, 
+                    to test whether x is greater than y 
+                    (using the <code class="w3-codespan">&gt;</code> operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".</p>
+                    
+                    <hr>
+                    <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+                    <!-- MidContent -->
+                    <!-- <p class="adtext">Advertisement</p> -->
+                    
+                      <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+                      <div id="snhb-mid_content-0"></div>
+                    
+                    </div>
+                    <hr>
+                    
+                    <h2>The else Statement</h2>
+                    <p>Use the <code class="w3-codespan">else</code> statement to specify a block of code to be executed if the condition is <code class="w3-codespan">false</code>.</p>
+                    
+                    <div class="w3-example">
+                    <h3>Syntax</h3>
+                    <pre class="language-java w3-white"><code>if (<em>condition</em>) {
+                    &nbsp; <em>// block of code to be executed if the condition is true</em>
+                    } else {
+                    &nbsp; <em>// block of code to be executed if the condition is false</em>
+                    }
+                    </code></pre>
+                    </div>
+                    
+                    <div class="w3-example">
+                    <h3>Example</h3>
+                    <pre class="language-java w3-white" data-line="4"><code>int time = 20;
+                    if (time &lt; 18) {
+                    &nbsp; System.out.println(&quot;Good day.&quot;);
+                    } else {
+                    &nbsp; System.out.println(&quot;Good evening.&quot;);
+                    }
+                    // Outputs &quot;Good evening.&quot;
+                    </code></pre>
+                    <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_if_else">Try it Yourself &raquo;</a>
+                    </p>
+                    </div>
+                    <h4>Example explained</h4>
+                    <p>In the example above, time (20) is greater than 18, so the condition is <code class="w3-codespan">false</code>. 
+                    Because of this, we move on to the <code class="w3-codespan">else</code> condition and print to the screen "Good 
+                    evening". If the time was less than 18, the program would print &quot;Good day&quot;.</p>
+                    <hr>
+                    
+                    <h2>The else if Statement</h2>
+                    
+                    <p>Use the <code class="w3-codespan">else if</code> statement to specify a new condition if the first condition is <code class="w3-codespan">false</code>.</p>
+                    
+                    <div class="w3-example">
+                    <h3>Syntax</h3>
+                    <pre class="language-java w3-white" data-keep-tags="em"><code>if (<em>condition1</em>) {
+                    &nbsp; <em>// block of code to be executed if condition1 is true</em>
+                    } else if (<em>condition2</em>) {
+                    &nbsp; <em>// block of code to be executed if the condition1 is false and condition2 is true</em>
+                    } else {
+                    &nbsp; <em>// block of code to be executed if the condition1 is false and condition2 is false</em>
+                    }
+                    </code></pre>
+                    </div>
+                    
+                    <div class="w3-example">
+                    <h3>Example</h3>
+                    <pre class="language-java w3-white" data-line="4"><code>int time = 22;
+                    if (time &lt; 10) {
+                    &nbsp; System.out.println(&quot;Good morning.&quot;);
+                    } else if (time &lt; 20) {
+                    &nbsp; System.out.println(&quot;Good day.&quot;);
+                    } else {
+                    &nbsp; System.out.println(&quot;Good evening.&quot;);
+                    }
+                    // Outputs &quot;Good evening.&quot;
+                    </code></pre>
+                    <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_if_else_if">Try it Yourself &raquo;</a>
+                    </p>
+                    </div>
+                    <h4>Example explained</h4>
+                    <p>In the example above, time (22) is greater than 10, so the <strong>first condition</strong> is <code class="w3-codespan">false</code>. The next condition, in the  
+                    <code class="w3-codespan">else if</code> statement, is also <code class="w3-codespan">false</code>, so we move on to the <code class="w3-codespan">else</code>
+                    condition since <strong>condition1</strong> and <strong>condition2</strong> is both <code class="w3-codespan">false</code> - and print to the screen "Good 
+                    evening".</p>
+                    <p>However, if the time was 14, our program would print "Good day."</p>
+                    <hr>
+                    
+                    <h2>Short Hand If...Else (Ternary Operator)</h2>
+                    <p>There is also a short-hand if else, which is known as the <strong>ternary 
+                    operator</strong> because it consists of three operands. It can be used to 
+                    replace multiple lines of code with a single line. It is often used to replace 
+                    simple if else statements:</p>
+                    
+                    <div class="w3-example">
+                    <h3>Syntax</h3>
+                    <em><pre class="language-java w3-white"><code><em>variable</em> = (<em>condition</em>) ? <em>expressionTrue</em> : <em> expressionFalse</em>;
+                    </code></pre></em>
+                    </div>
+                    
+                    <p>Instead of writing:</p>
+                    <div class="w3-example">
+                    <h3>Example</h3>
+                    <pre class="language-java w3-white"><code>int time = 20;
+                    if (time &lt; 18) {
+                    &nbsp; System.out.println(&quot;Good day.&quot;);
+                    } else {
+                    &nbsp; System.out.println(&quot;Good evening.&quot;);
+                    }
+                    </code></pre>
+                    <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_if_else">Try it Yourself &raquo;</a>
+                    </p>
+                    </div>
+                    <p>You can simply write:</p>
+                    <div class="w3-example">
+                    <h3>Example</h3>
+                    <pre class="language-java w3-white"><code>int time = 20;
+                    String result = (time &lt; 18) ? &quot;Good day.&quot; : &quot;Good evening.&quot;;
+                    System.out.println(result);
+                    </code></pre>
+                    <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_if_ternary">Try it Yourself &raquo;</a>
+                    </p>
+                    </div>
+                    <hr>
+                    
+                    <div>
+                    <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="exercise.asp?filename=exercise_conditions1" method="post" target="_blank">
+                    <h2>Test Yourself With Exercises</h2>
+                    <div class="exercisewindow">
+                    <h2>Exercise:</h2>
+                    <p>Print "Hello World" if <code class="w3-codespan">x</code> is greater than <code class="w3-codespan">y</code>.</p>
+                    <div class="exerciseprecontainer">
+                    <pre style="overflow: auto;">
+                    int x = 50;
+                    int y = 10;
+                    <input name="ex1" maxlength="2" style="width: 25px;"> (x <input name="ex2" maxlength="1" style="width: 15px;"> y) {
+                      System.out.println("Hello World");
+                    }
+                    </pre>
+                    </div>
+                    <br>
+                    <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+                    <p><a target="_blank" href="exercise.asp?filename=exercise_conditions1">Start the Exercise</a></p>
+                    </div>
+                    </form>
+                    </div>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+                    
+                    <hr/>
+                    <div class="botton">
+                    <a href="./Java- Booleans.html" class="previous">&laquo; Previous</a>
+                    <a href="./Java- Switch.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2> JAVA PROGRAMMING </h2>
+                <ul>
+                   
+                  <li><a href="#home" data-after="JAVA - Home">Home</a></li>
+                  <li><a href="./JAVA INTRO.html" data-after="javaintro">Java Intro</a>
+                   
+                   
+                <li><a href="./JAVA ENVIROMENT SETUP.html" data-after="enviromentsetup">Java - Enviroment Setup</a><br> </li>
+                <li><a href="./Java - Basic Syntax.html" data-after="basicsyntax">Java - Basic Syntax</a><br></li>
+                  <li><a href="./Java- Comments.html" data-after="comments">Java- Comments</a></li>
+                  <li><a href="./Java- Variable.html" data-after="variable">Java- Variable</a></li>
+                  <li><a href="./Java- Data Type.html" data-after="datatype">Java- Data Type</a></li>
+          
+                  <li><a href="./Java- Type casting.html" data-after="typecasting">Java- Type casting</a></li>
+                  <li><a href="./Java- Operators.html" data-after="operators">Java- Operators</a></li>
+                  <li><a href="./Java- String.html" data-after="string">Java- String</a></li>
+                  <li><a href="./Java- Math.html" data-after="math">Java- Math</a></li>
+                  <li><a href="./Java- Booleans.html" data-after="booleans">Java- Booleans</a></li>
+                  <li><a href="./Java- If....Else.html" data-after="ifelse">Java- If....Else</a></li>
+                  <li><a href="./Java- Switch.html" data-after="switch">Java- Switch</a></li>
+                  <li><a href="./Java- While Loop.html" data-after="while">Java- While Loop</a></li>
+                  <li><a href="./Java- Do While Loop.html" data-after="dowhile">Java- Do While Loop</a></li>
+                  <li><a href="./Java- For Loop.html" data-after="for">Java- For Loop</a></li>
+                  <li><a href="./Java- Break....Continue.html" data-after="break">Java- Break/Continue</a></li>
+                  <li><a href="./Java- Array.html" data-after="array">Java- Array</a></li>     
+                  
+                  <li><a href="#OOP" data-after="array">Java- Object Oriented</a></li>  
+          
+          
+          
+          
+                  <li><a href="./Java - Inheritanc.html" data-after="switch">Java - Inheritanc</a></li>
+                  <li><a href="./Java - Overriding.html" data-after="while">Java - Overriding</a></li>
+                  <li><a href="./Java - Polymorphism.html" data-after="dowhile">Java - Polymorphism</a></li>
+                  <li><a href="./Java - Abstraction.html" data-after="for">Java - Abstraction</a></li>
+                  <li><a href="./Java - Encapsulation.html" data-after="for">Java - Encapsulation</a></li>
+                  <li><a href="./Java - Interfaces.html" data-after="break">Java - Interfaces</a></li>
+                  <li><a href="./Java - Packages.html" data-after="array">Java - Packages</a></li>   </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+                 <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+    
+        </div>
+    </body>
+
+</html>

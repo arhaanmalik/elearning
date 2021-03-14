@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Computer-Network</title>
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" contant="width=device-width"/>
+    
+    <script src=""></script>
+    </head>
+    <body>
+        <div id="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li > <a class="active" href="file:///C:/Users/USER/Desktop/youtube/index.html">HOME</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">SERVICES</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">CONTACT</a> </li>
+                        <li > <a href="file:///C:/Users/USER/Desktop/youtube/index.html">ABOUT</a> </li>
+                    </ul>
+                    
+                    
+            
+            </header>
+            <div id="main">
+            <div id="contant">
+                <article class="art 1">
+                <header class="art-header">
+                    <h2 class="title"><a href="#">C Programming</a></h2>
+                    <span></span>
+                    </header>
+                    <h1 class="h1">C Programming Strings</h1>
+<ul class="points">
+    
+    In this tutorial, you'll learn about strings in C programming. You'll learn to declare them, initialize them and use them for various I/O operations with the help of examples.
+    <br>
+    <br>
+    In C programming, a string is a sequence of characters terminated with a null character \0. For example:
+    <br><br> 
+    char c[] = "c string";<br>
+    When the compiler encounters a sequence of characters enclosed in the double quotation marks, it appends a null character \0 at the end by default.
+    <br><br>
+    Memory diagram of strings in C programming<br>
+    <br>
+    How to declare a string?<br>
+    Here's how you can declare strings:<br><br>
+    
+    char s[5];<br>
+    string declaration in C programming<br><br>
+    
+    
+    Here, we have declared a string of 5 characters.<br><br>
+    
+    How to initialize strings?<br>
+    You can initialize strings in a number of ways.<br><br>
+    
+    char c[] = "abcd";<br><br>
+    
+    char c[50] = "abcd";<br><br>
+    
+    char c[] = {'a', 'b', 'c', 'd', '\0'};<br><br>
+    
+    char c[5] = {'a', 'b', 'c', 'd', '\0'};<br>
+    Initialization of strings in C programming<br><br>
+    
+    Let's take another example:<br><br>
+    
+    char c[5] = "abcde";<br>
+    Here, we are trying to assign 6 characters (the last character is '\0') to a char array having 5 characters. This is bad and you should never do this.
+    <br>
+    Assigning Values to Strings<br>
+    Arrays and strings are second-class citizens in C; they do not support the assignment operator once it is declared. For example,
+    <br><br>
+    char c[100];<br>
+    c = "C programming";  // Error! array type is not assignable.<br>
+    Note: Use the strcpy() function to copy the string instead.<br>
+    <br>
+    Read String from the user<br>
+    You can use the scanf() function to read a string.<br><br>
+    
+    The scanf() function reads the sequence of characters until it encounters whitespace (space, newline, tab, etc.).
+    <br><br>
+    Example 1: scanf() to read a string<br>
+    #include <stdio.h><br>
+    int main()<br>
+    {<br>
+        char name[20];<br>
+        printf("Enter name: ");<br>
+        scanf("%s", name);<br>
+        printf("Your name is %s.", name);<br>
+        return 0;<br>
+    }<br>
+    Output<br><br>
+    
+    Enter name: Dennis Ritchie<br>
+    Your name is Dennis.<br>
+    Even though Dennis Ritchie was entered in the above program, only "Dennis" was stored in the name string. It's because there was a space after Dennis.
+    <br><br>
+    How to read a line of text?<br>
+    You can use the fgets() function to read a line of string. And, you can use puts() to display the string.
+    <br><br>
+    Example 2: fgets() and puts()<br>
+    #include <stdio.h><br>
+    int main()<br>
+    {<br>
+        char name[30];<br>
+        printf("Enter name: ");<br>
+        fgets(name, sizeof(name), stdin);  // read string<br>
+        printf("Name: ");<br>
+        puts(name);    // display string<br>
+        return 0;<br>
+    }<br>
+    Output<br><br>
+    
+    Enter name: Tom Hanks<br>
+    Name: Tom Hanks<br>
+    Here, we have used fgets() function to read a string from the user.<br><br>
+    
+    fgets(name, sizeof(name), stdlin); // read string<br><br>
+    
+    The sizeof(name) results to 30. Hence, we can take a maximum of 30 characters as input which is the size of the name string.
+    <br><br>
+    To print the string, we have used puts(name);.
+    <br><br>
+    Note: The gets() function can also be to take input from the user. However, it is removed from the C standard.
+    <br><br>
+    It's because gets() allows you to input any length of characters. Hence, there might be a buffer overflow.
+    <br><br>
+    Passing Strings to Functions<br>
+    Strings can be passed to a function in a similar way as arrays. Learn more about passing arrays to a function.
+    <br><br>
+    Example 3: Passing string to a Function<br>
+    #include <stdio.h><br>
+    void displayString(char str[]);<br>
+    
+    int main()<br>
+    {<br>
+        char str[50];<br>
+        printf("Enter string: ");<br>
+        fgets(str, sizeof(str), stdin);         <br>    
+        displayString(str);     // Passing string to a function.  <br>  
+        return 0;<br>
+    }<br>
+    void displayString(char str[])<br>
+    {<br>
+        printf("String Output: ");<br>
+        puts(str);<br>
+    }<br>
+    Strings and Pointers<br>
+    Similar like arrays, string names are "decayed" to pointers. Hence, you can use pointers to manipulate elements of the string. We recommended you to check C Arrays and Pointers before you check this example.
+    <br><br>
+    Example 4: Strings and Pointers<br>
+    #include <stdio.h><br><br>
+    
+    int main(void) {<br>
+      char name[] = "Harry Potter";<br><br>
+    
+      printf("%c", *name);     // Output: H<br>
+      printf("%c", *(name+1));   // Output: a<br>
+      printf("%c", *(name+7));   // Output: o<br><br>
+    
+      char *namePtr;<br><br>
+    
+      namePtr = name;<br>
+      printf("%c", *namePtr);     // Output: H<br>
+      printf("%c", *(namePtr+1));   // Output: a<br>
+      printf("%c", *(namePtr+7));   // Output: o<br>
+    }<br>
+    Commonly Used String Functions<br>
+    strlen() - calculates the length of a string<br>
+    strcpy() - copies a string to another<br>
+    strcmp() - compares two strings<br>
+    strcat() - concatenates two strings<br>
+
+</ul>
+                    <div class="botton">
+                    <a href="./ComputerNetwork.html" class="previous">&laquo; Previous</a>
+                    <a href="./feature.html" class="next">Next &raquo;</a>
+                </div>
+                </article>
+                
+                
+                
+                </div>
+            <aside id="sidebar">
+                <div class="block">
+                <h2>C programming </h2>
+                <ul>
+                    <li><a href="#" > <i class="fa fa-qrcode"> </i>Hello World </li>
+                        <li><a href="./Untitled-1.html" > <i class="fa fa-qrcode"> </i> C Keywords and Identifiers</li>
+                            <li><a href="./C Variables, Constants and Literals.html" > <i class="fa fa-qrcode"> </i> C Variables, Constants</li>
+                                <li><a href="./C Data Types.html" > <i class="fa fa-qrcode"> </i> C Data Types </li>
+                                    <li><a href="./C Input Output.html" > <i class="fa fa-qrcode"> </i>C Input Output (I/O) </li>
+                                        <li><a href="./C Programming Operator.html" > <i class="fa fa-qrcode"> </i>C Programming Operators</li>
+                                            <li><a href="./C if...else Statemen.html" > <i class="fass fa-qrcode"> </i> C if...else Statement</li>
+                                                <li><a href="./C for Loop.html" > <i class="fass fa-qrcode"> </i> C for Loop</li>
+                                                    <li><a href="./C while and do...while Loop.html" > <i class="fass fa-qrcode"> </i>C while and do...while Loop</li>
+                                                        <li><a href="./C break and continue.html" > <i class="fass fa-qrcode"> </i>C break and continue</li>
+                                                            <li><a href="./C switch Statement.html" > <i class="fass fa-qrcode"> </i> C switch Statement </li>
+                                                                <li><a href="./C goto Statement.html" > <i class="fass fa-qrcode"> </i> C goto Statement</li>
+                                                                    <li><a href="./C Functions.html" > <i class="fass fa-qrcode"> </i>C Functions</li>
+                                                                        <li><a href="./C User-defined functions.html" > <i class="fass fa-qrcode"> </i>C User-defined functions</li>
+                                                                            <li><a href="./Types of User-defined Functions in C Programming.html" > <i class="fass fa-qrcode"> </i>Types of User-defined Functions in C Programming </li>
+                                                                                <li><a href="./C Recursion.html" > <i class="fass fa-qrcode"> </i>C Recursion</li>
+                                                                                    <li><a href="./C Storage Class.html" > <i class="fass fa-qrcode"> </i>C Storage Class </li>
+                                                                                        <li><a href="./C Arrays.html" > <i class="fass fa-qrcode"> </i> C Arrays </li>
+                                                                                            <li><a href="./C Multidimensional Array.html" > <i class="fass fa-qrcode"> </i> C Multidimensional Arrays </li>
+                                                                                                <li><a href="./Pass arrays to a function in C.html" > <i class="fass fa-qrcode"> </i> Pass arrays to a function in C </li>
+                                                                                                    <li><a href="./C Pointers.html" > <i class="fass fa-qrcode"> </i> C Pointers</li>
+                                                                                                    <li><a href="./Relationship Between Arrays and Pointers.html" > <i class="fass fa-qrcode"> </i> Relationship Between Arrays and Pointers</li>
+                                                                                                        <li><a href="./C Pass Addresses and Pointers.html" > <i class="fass fa-qrcode"> </i> C Pass Addresses and Pointers </li>
+                                                                                                            <li><a href="./C Dynamic Memory Allocation.html" > <i class="fass fa-qrcode"> </i>C Dynamic Memory Allocation </li>
+                                                                                                                <li><a href="./C Array and Pointer Examples.html" > <i class="fass fa-qrcode"> </i> C Array and Pointer Examples </li>
+                                                                                                                    <li><a href="./C Programming Strings.html" > <i class="fass fa-qrcode"> </i> C Programming Strings </li>
+                                                                                                                        <li><a href="./String Manipulations In C Programming Using Library Functions.html" > <i class="fass fa-qrcode"> </i> String Manipulations In C Programming Using Library Functions </li>
+                                                                                                                            <li><a href="./C struct.html" > <i class="fass fa-qrcode"> </i> C struct </li>
+                                                                                                                            <li><a href="./C structs and Pointers.html" > <i class="fass fa-qrcode"> </i> C structs and Pointers </li>
+                                                                                                                                <li><a href="./C Structure and Function.html" > <i class="fass fa-qrcode"> </i>C Structure and Function </li>
+            
+                                                                                                                                    <li><a href="./C Unions.html" > <i class="fass fa-qrcode"> </i> C Unions</li>
+                                                                                                                                        <li><a href="./C File Handling.html" > <i class="fass fa-qrcode"> </i>C File Handling </li>
+            
+                                                                                                                                            <li><a href="./C Files Examples.html" > <i class="fass fa-qrcode"> </i> C Files Examples </li>
+            
+                                                                                                                                                <li><a href="./C enums.html" > <i class="fass fa-qrcode"> </i> C enums </li>
+                                                                                                                                                    <li><a href="./C Preprocessor and Macros.html" > <i class="fass fa-qrcode"> </i> C Preprocessor and Macros </li>
+                                                                                                                                                        <li><a href="./C Standard Library Functions.html" > <i class="fass fa-qrcode"> </i> C Standard Library Functions </li>
+                                                                                                                                                           
+                </ul>
+                </aside>
+            </div>
+                <div class="clr"></div>
+               <!--footer-->
+ <p> <h2 class="h2">Help Others, Please Share</h2>
+ </p>
+ <section id="footer">
+   <div class="footer container">
+     <div class="brand"><h1></h1></div>
+     <h2>Glocal  Learners<br>Your Complete Study Solution</h2>
+     <div class="social-icon">
+       <div class="social-item">
+         <a href="https://www.facebook.com/tiku.mohmmad.3"><img src="./fb.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://twitter.com/TikuM15?s=08"><img src="./twtr.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.instagram.com/p/CK80F_hnNRU/?igshid=1rl3i2fdff968"><img src="./insta.png"/></a>
+       </div>
+       <div class="social-item">
+         <a href="https://www.linkedin.com/in/tiku-m-0a210b1a5"><img src="./lnkdn (1).png"/></a>
+       </div>
+     </div>
+     <p>Copyright @ 2019 n GLOCAL UNIVERSITY . All rights reserved</p>
+   </div>
+ </section>
+ <!-- End Footer -->
+
+    
+        </div>
+    </body>
+
+</html>
